@@ -61,7 +61,9 @@ class CfgFunctions
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
 	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
 
-	#include "USER\userFunctions.hpp"
+	#include "HS_spawner\cfgFunctions.hpp"
+    
+    #include "USER\userFunctions.hpp"
 };
 
 
