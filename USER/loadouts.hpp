@@ -18,7 +18,7 @@
 */
 
 
-loadoutFactionBlu = "";
+loadoutFactionBlu = "un";
 loadoutFactionOpf = "";
 loadoutFactionInd = "";
 
