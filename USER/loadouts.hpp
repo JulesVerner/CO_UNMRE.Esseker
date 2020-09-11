@@ -19,8 +19,8 @@
 
 
 loadoutFactionBlu = "un";
-loadoutFactionOpf = "looter";
-loadoutFactionInd = "";
+loadoutFactionOpf = "";
+loadoutFactionInd = "looter";
 
 // Achtung: grad-factions enthält derzeit keine Loadouts, die für Zivilisten funktionieren
 loadoutFactionCiv = "";
