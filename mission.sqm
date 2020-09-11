@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7817.2715,389.30502,3512.3225};
-		dir[]={0.20696592,-0.5820322,0.78640586};
-		up[]={0.14813603,0.81316477,0.56287003};
-		aside[]={0.96708751,4.3516047e-007,-0.25451782};
+		pos[]={11342.722,182.88538,663.74133};
+		dir[]={-0.22255066,-0.8591581,-0.46085414};
+		up[]={-0.37360874,0.51171392,-0.77366048};
+		aside[]={-0.90052325,1.0593794e-006,0.43487391};
 	};
 };
 binarizationWanted=0;
@@ -107,7 +107,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -7754,19 +7754,8 @@ class Mission
 					name="Kommentare";
 					class Entities
 					{
-						items=2;
+						items=1;
 						class Item0
-						{
-							dataType="Comment";
-							class PositionInfo
-							{
-								position[]={2295.7473,5,4924.7764};
-							};
-							title="Einheiten";
-							id=627;
-							atlOffset=-194.06746;
-						};
-						class Item1
 						{
 							dataType="Comment";
 							class PositionInfo
@@ -7780,11 +7769,10 @@ class Mission
 						};
 					};
 					id=948;
-					atlOffset=-92.952637;
 				};
 			};
 			id=729;
-			atlOffset=-184.8584;
+			atlOffset=-164.01442;
 		};
 		class Item2
 		{
@@ -9178,7 +9166,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11340.789,154.03333,653.82697};
+						position[]={11340.38,154.13431,651.59961};
 					};
 					side="West";
 					flags=7;
@@ -9189,7 +9177,6 @@ class Mission
 					};
 					id=1530;
 					type="B_Soldier_SL_F";
-					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9257,7 +9244,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11341.916,154.09879,652.74799};
+						position[]={11341.507,154.1996,650.52063};
 					};
 					side="West";
 					flags=5;
@@ -9268,7 +9255,6 @@ class Mission
 					};
 					id=1531;
 					type="B_Soldier_SL_F";
-					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9317,7 +9303,6 @@ class Mission
 			{
 			};
 			id=1529;
-			atlOffset=1.5258789e-005;
 		};
 		class Item12
 		{
@@ -9970,7 +9955,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11346.96,154.38678,647.85797};
+						position[]={11343.332,154.42133,646.10577};
 					};
 					side="West";
 					flags=7;
@@ -10029,7 +10014,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11348.553,154.45631,646.39026};
+						position[]={11344.925,154.50105,644.63806};
 					};
 					side="West";
 					flags=5;
