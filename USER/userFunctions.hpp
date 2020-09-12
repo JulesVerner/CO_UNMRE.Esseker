@@ -10,4 +10,9 @@ class GRAD_USER {
 		file = "USER\functions\localEffects";
 		class twitching {};
 	};
+
+	class Airfield {
+		file = "USER\functions\Airfield";
+		class startExfil {};
+	};	
 };
