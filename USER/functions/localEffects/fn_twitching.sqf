@@ -1,5 +1,7 @@
 params ["_units"];
 
+if !(canSuspend) exitWith { _this spawn grad_user_fnc_twitching; };
+
 private _horrorUnits = [];
 private _allLightCones = [];
 player setVariable ["showAnimation", false];
