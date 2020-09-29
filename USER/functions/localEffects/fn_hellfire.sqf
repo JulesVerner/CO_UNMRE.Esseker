@@ -1,7 +1,7 @@
 params ["_player", "_duration"];
 
 if !(local _player) then {
-	_this remoteExecCall ["grad_UNMRE_fnc_hellfire", _player, false];
+	_this remoteExecCall ["grad_user_fnc_hellfire", _player, false];
 };
 
 private _pos = getPos _player; 
@@ -92,9 +92,21 @@ private _helpers = [];
 	for "_i" from 1 to _index do {
 		private _from = selectRandom _helpers;
 
-		_from say3D (selectRandom ["scream_1", "scream_2", "scream_3", "scream_4", "scream_5", "scream_6", "scream_7", "scream_8"]);
+		_from say3D (selectRandom [
+			"scream_1", 
+			"scream_2", 
+			"scream_3", 
+			"scream_4", 
+			"scream_5", 
+			"scream_6", 
+			"scream_7", 
+			"scream_8",
+			"scream_9",
+			"scream_10",
+			"scream_11"
+		]);
 	};
-}, 2, _helpers] call CBA_fnc_addPerFrameHandler;
+}, 1, _helpers] call CBA_fnc_addPerFrameHandler;
  
 [{ 
 	{ 

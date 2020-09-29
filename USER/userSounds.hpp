@@ -63,3 +63,21 @@ class scream_8
 	sound[] = { "USER\sounds\scream_8.ogg", 10, 1 };
 	titles[] = {};
 };
+class scream_9
+{
+	name = "scream_9";
+	sound[] = { "USER\sounds\scream_9.ogg", 10, 1 };
+	titles[] = {};
+};
+class scream_10
+{
+	name = "scream_10";
+	sound[] = { "USER\sounds\scream_10.ogg", 10, 1 };
+	titles[] = {};
+};
+class scream_11
+{
+	name = "scream_11";
+	sound[] = { "USER\sounds\scream_11.ogg", 10, 1 };
+	titles[] = {};
+};
