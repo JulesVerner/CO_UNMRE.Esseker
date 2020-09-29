@@ -5,13 +5,8 @@
 
 class FloatingHead
 {
-	// how the sound is referred to in the editor (e.g. trigger effects)
 	name = "floatingHead";
-
-	// filename, volume, pitch, distance (optional)
 	sound[] = { "USER\Sounds\Floating_Head.ogg", 3, 1 };
-
-	// subtitle delay in seconds, subtitle text
 	titles[] = {};
 };
 
@@ -21,63 +16,53 @@ class scream_1
 	sound[] = { "USER\sounds\scream_1.ogg", 10, 1 };
 	titles[] = {};
 };
-class scream_2
+class scream_2: scream_1
 {
 	name = "scream_2";
 	sound[] = { "USER\sounds\scream_2.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_3
+class scream_3: scream_1
 {
 	name = "scream_3";
 	sound[] = { "USER\sounds\scream_3.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_4
+class scream_4: scream_1
 {
 	name = "scream_4";
 	sound[] = { "USER\sounds\scream_4.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_5
+class scream_5: scream_1
 {
 	name = "scream_5";
 	sound[] = { "USER\sounds\scream_5.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_6
+class scream_6: scream_1
 {
 	name = "scream_6";
 	sound[] = { "USER\sounds\scream_6.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_7
+class scream_7: scream_1
 {
 	name = "scream_7";
 	sound[] = { "USER\sounds\scream_7.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_8
+class scream_8: scream_1
 {
 	name = "scream_8";
 	sound[] = { "USER\sounds\scream_8.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_9
+class scream_9: scream_1
 {
 	name = "scream_9";
 	sound[] = { "USER\sounds\scream_9.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_10
+class scream_10: scream_1
 {
 	name = "scream_10";
 	sound[] = { "USER\sounds\scream_10.ogg", 10, 1 };
-	titles[] = {};
 };
-class scream_11
+class scream_11: scream_1
 {
 	name = "scream_11";
 	sound[] = { "USER\sounds\scream_11.ogg", 10, 1 };
-	titles[] = {};
 };
