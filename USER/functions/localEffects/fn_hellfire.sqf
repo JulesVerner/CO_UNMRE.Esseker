@@ -92,7 +92,8 @@ private _helpers = [];
 	for "_i" from 1 to _index do {
 		private _from = selectRandom _helpers;
 
-		_from say3D (selectRandom [scream_1, scream_2, scream_3, scream_4, scream_5, scream_6, scream_7, scream_8]);
+		_from say3D (selectRandom ["scream_1", "scream_2", "scream_3", "scream_4", "scream_5", "scream_6", "scream_7", "scream_8"]);
+		systemChat "test";
 	};
 }, 2, _helpers] call CBA_fnc_addPerFrameHandler;
  

@@ -106,55 +106,6 @@ class Params {
 //SOUNDS =======================================================================
 class CfgSounds {
 	#include "USER\userSounds.hpp"
-
-    class scream_1
-	{
-		name = "scream_1";
-		sound[] = { "USER\sounds\scream_1.ogg", 1, 1 };
-		titles[] = {};
-	};
-    class scream_2
-	{
-		name = "scream_2";
-		sound[] = { "USER\sounds\scream_2.ogg", 1, 1 };
-		titles[] = {};
-	};
-    class scream_3
-	{
-		name = "scream_3";
-		sound[] = { "USER\sounds\scream_3.ogg", 1, 1 };
-		titles[] = {};
-	};
-    class scream_4
-	{
-		name = "scream_4";
-		sound[] = { "USER\sounds\scream_4.ogg", 1, 1 };
-		titles[] = {};
-	};
-    class scream_5
-	{
-		name = "scream_5";
-		sound[] = { "USER\sounds\scream_5.ogg", 1, 1 };
-		titles[] = {};
-	};
-    class scream_6
-	{
-		name = "scream_6";
-		sound[] = { "USER\sounds\scream_6.ogg", 1, 1 };
-		titles[] = {};
-	};
-    class scream_7
-	{
-		name = "scream_7";
-		sound[] = { "USER\sounds\scream_7.ogg", 1, 1 };
-		titles[] = {};
-	};
-    class scream_8
-	{
-		name = "scream_8";
-		sound[] = { "USER\sounds\scream_8.ogg", 1, 1 };
-		titles[] = {};
-	};
 };
 
 

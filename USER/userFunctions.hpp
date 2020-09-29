@@ -10,6 +10,7 @@ class GRAD_USER {
 		file = "USER\functions\localEffects";
 		class twitching {};
 		class floatingHead {};
+		class hellfire {};
 	};
 
 	class Airfield {
