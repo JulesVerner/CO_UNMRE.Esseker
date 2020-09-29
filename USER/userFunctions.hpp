@@ -2,6 +2,7 @@
 *   Hier können eigene Funktionen eingebunden werden.
 *   Ist in CfgFunctions included.
 */
+#include "..\HS_spawner\cfgFunctions.hpp"
 
 class GRAD_USER {
 	tag = "grad_user";
