@@ -66,3 +66,8 @@ class scream_11: scream_1
 	name = "scream_11";
 	sound[] = { "USER\sounds\scream_11.ogg", 10, 1 };
 };
+class scream_12: scream_1
+{
+	name = "scream_12";
+	sound[] = { "USER\sounds\scream_12.ogg", 10, 1 };
+};

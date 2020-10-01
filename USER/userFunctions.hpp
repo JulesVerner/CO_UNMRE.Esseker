@@ -12,6 +12,8 @@ class GRAD_USER {
 		class twitching {};
 		class floatingHead {};
 		class hellfire {};
+		class skeletonRushing {};
+		// class particleEffectsTest {};
 	};
 
 	class Airfield {
