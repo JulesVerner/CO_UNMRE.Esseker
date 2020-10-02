@@ -21,3 +21,11 @@ class GRAD_USER {
 		class startExfil {};
 	};	
 };
+
+
+class GRAD_zeusModules {
+	class zeusModules {
+		file = "USER\functions\zeusModules";
+		class addZeusModules { postinit = 1 };
+	};
+}

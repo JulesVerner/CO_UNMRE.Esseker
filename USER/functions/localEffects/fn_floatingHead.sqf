@@ -13,7 +13,7 @@ sleep 0.5;
 // deleteVehicle _this;
 // }, _head, 10] call CBA_fnc_waitAndExecute;
 
-["FilmGrain", 2000, [0.7, 1.25, 2.0, 0.75, 1.0, true]] spawn
+["FilmGrain", 2000, [0.2, 1.25, 2.0, 0.75, 1.0, true]] spawn
 {
 	params ["_name", "_priority", "_effect"];
 
