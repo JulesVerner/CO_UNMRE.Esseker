@@ -71,14 +71,13 @@ private _distance = 0;
 	{
 		params ["_args", "_handle"];
 		_args params ["_skeleton", "_distance", "_foglevel", "_ps1"];
-		if ((player distance2D _skeleton) > 1.5) then {
+		if ((player distance2D _skeleton) > 1) then {
 			_distance = _distance + 0.4;
 			// createVehicle ["Sign_Sphere10cm_F", _skeleton getPos [_distance, _skeleton getDir player], [], 0, "CAN_COLLIDE"];
 			private _pos = AGLToASL (_skeleton getPos [_distance, _skeleton getDir player]);
 			// _skeleton setPosASL [_pos#0, _pos#1, getTerrainHeightASL _pos];
 			_skeleton setPosASL _pos;
 			_ps1 setPosASL [_pos#0, _pos#1, 1];
-			systemChat str(getPosASL _ps1);
 			_skeleton setDir (player getDir _skeleton);
 		} else {
 			[_handle] call cba_fnc_removeperframehandler;

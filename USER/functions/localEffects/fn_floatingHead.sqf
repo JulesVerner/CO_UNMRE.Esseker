@@ -4,7 +4,7 @@ if !(canSuspend) exitWith { _this spawn grad_user_fnc_floatingHead; };
 private _head = "Asian_Head" createVehicleLocal (getPos player);
 _head hideObject true;
 
-_head attachTo [player, [-0.065,0.4,0.13], "head"];
+_head attachTo [player, [-0.065,0.45,0.13], "head"];
 [_head, [-90, 0, -90]] call BIS_fnc_setObjectRotation;
 
 sleep 0.5;

@@ -13,7 +13,7 @@ class GRAD_USER {
 		class floatingHead {};
 		class hellfire {};
 		class skeletonRushing {};
-		// class particleEffectsTest {};
+		class headFountain {};
 	};
 
 	class Airfield {
