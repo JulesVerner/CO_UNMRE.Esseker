@@ -14,6 +14,7 @@ class GRAD_USER {
 		class hellfire {};
 		class skeletonRushing {};
 		class headFountain {};
+		class skinUnits {};
 	};
 
 	class Airfield {

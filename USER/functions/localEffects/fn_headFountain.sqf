@@ -7,8 +7,7 @@ private _persianHeads = ["PersianHead_A3_01", "PersianHead_A3_02", "PersianHead_
 private _blackHeads = ["AfricanHead_01", "AfricanHead_02", "AfricanHead_03", "TanoanHead_A3_01", "TanoanHead_A3_02", "TanoanHead_A3_03", "TanoanHead_A3_04", "TanoanHead_A3_05", "TanoanHead_A3_06", "TanoanHead_A3_07", "TanoanHead_A3_08", "Barklem"];
 private _asianHeads = ["AsianHead_A3_01", "AsianHead_A3_02", "AsianHead_A3_03", "AsianHead_A3_04", "AsianHead_A3_05", "AsianHead_A3_06", "AsianHead_A3_07"];
 
-private _nearUnits = allUnits inAreaArray [getPos player, 100, 100, 0, false, -1];
-_nearUnits = _nearUnits select { (side _x) == west };
+private _nearUnits = allUnits select { (((side _x) == west) || ((side _x) == civilian)) && ((player distance2D _x) <= 100) };
 if (player in _nearUnits) then {
 	_nearUnits deleteAt (_nearUnits find player);
 };
@@ -60,7 +59,7 @@ private _allSources = [];
 } forEach _nearUnits;
 
 
-sleep 10;
+sleep 5;
 
 
 {	

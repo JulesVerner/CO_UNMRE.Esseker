@@ -1,7 +1,10 @@
-params ["_units"];
 
 if !(canSuspend) exitWith { _this spawn grad_user_fnc_twitching; };
 
+private _nearUnits = allUnits select { (((side _x) == west) || ((side _x) == civilian)) && ((player distance2D _x) <= 100) };
+if (player in _nearUnits) then {
+	_nearUnits deleteAt (_nearUnits find player);
+};
 private _horrorUnits = [];
 private _allLightCones = [];
 player setVariable ["showAnimation", false];
@@ -40,7 +43,7 @@ cutText["", "WHITE OUT", 0.05];
 		_lightpoint setLightFlareMaxDistance 2;
 	};
 
-} forEach _units;
+} forEach _nearUnits;
 /*
 cutText["", "WHITE IN", 0.05];
 */
@@ -54,4 +57,4 @@ cutText["", "WHITE IN", 0.1];
 
 {
 	_x hideObject false;
-} forEach _units;
+} forEach _nearUnits;

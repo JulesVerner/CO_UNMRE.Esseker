@@ -42,7 +42,7 @@ _ps1 setParticleParams [
 	["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard",
 	1, 1, [0, 0, 0], [0, 0, 0.5], 0, 1, 1, 3, [0.5,1.5],
 	[[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]],
-	[0.25,1], 1, 1, "", "", _ps1];
+	[0.25,1], 1, 1, "", "", _this];
 _ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0];
 _ps1 setDropInterval 0.001;
 
@@ -57,7 +57,7 @@ _ps1 setDropInterval 0.001;
 // _ps2 setDropInterval 0.02;
 // _ps2 attachTo [_skeleton];
 
-sleep 1;
+sleep 2;
 
 _skeleton say3D "scream_12";
 
