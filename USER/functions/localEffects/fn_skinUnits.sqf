@@ -1,6 +1,9 @@
 
 if !(canSuspend) exitWith { _this spawn grad_user_fnc_skinUnits; };
 
+private _GRAD_UNMRE_effectsPlayed = player getVariable ["GRAD_UNMRE_effectsPlayed", []];
+_GRAD_UNMRE_effectsPlayed pushBackUnique "skinunits";
+player setVariable ["GRAD_UNMRE_effectsPlayed", _GRAD_UNMRE_effectsPlayed];
 
 private _nearUnits = allUnits select { (((side _x) == west) || ((side _x) == civilian)) && ((player distance2D _x) <= 100) };
 if (player in _nearUnits) then {

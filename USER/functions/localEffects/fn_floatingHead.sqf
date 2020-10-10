@@ -1,6 +1,10 @@
 
 if !(canSuspend) exitWith { _this spawn grad_user_fnc_floatingHead; };
 
+private _GRAD_UNMRE_effectsPlayed = player getVariable ["GRAD_UNMRE_effectsPlayed", []];
+_GRAD_UNMRE_effectsPlayed pushBackUnique "floatingHead";
+player setVariable ["GRAD_UNMRE_effectsPlayed", _GRAD_UNMRE_effectsPlayed];
+
 private _head = "Asian_Head" createVehicleLocal (getPos player);
 _head hideObject true;
 

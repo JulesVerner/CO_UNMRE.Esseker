@@ -15,6 +15,7 @@ class GRAD_USER {
 		class skeletonRushing {};
 		class headFountain {};
 		class skinUnits {};
+		class sparks {};
 	};
 
 	class Airfield {
@@ -25,8 +26,11 @@ class GRAD_USER {
 
 
 class GRAD_zeusModules {
+	tag = "grad_zeus";
+
 	class zeusModules {
 		file = "USER\functions\zeusModules";
 		class addZeusModules { postinit = 1 };
+		class monitorEffects {};
 	};
 }

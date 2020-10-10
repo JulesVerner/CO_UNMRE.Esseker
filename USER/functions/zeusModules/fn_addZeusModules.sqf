@@ -55,3 +55,27 @@
 	[[], grad_user_fnc_twitching] remoteExec ["spawn", _attachedObject, false];
 	}
 ] call zen_custom_modules_fnc_register;
+
+
+
+["GRAD local effects", "Monitor Effects", {
+
+	["Monitor local effects",
+	[ 
+		[
+			"CHECKBOX",
+			["Switch monitoring", "Monitors effects if checked"],
+			[player getVariable ["GRAD_UNMRE_monitoringActive", false]],
+			true
+		]
+	],
+	{
+		params ["_dialogValues", "_args"];
+		_dialogValues params ["_monitoring"];
+
+		if (_monitoring isEqualTo (player getVariable ["GRAD_UNMRE_monitoringActive", false])) exitWith {};
+		player setVariable ["GRAD_UNMRE_monitoringActive", _monitoring];
+		[[_monitoring], grad_zeus_fnc_monitorEffects] remoteExec ["spawn", player, false];
+	}, {}, []] call zen_dialog_fnc_create;
+
+}] call zen_custom_modules_fnc_register;
