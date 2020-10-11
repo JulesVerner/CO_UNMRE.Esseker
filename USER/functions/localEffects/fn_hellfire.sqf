@@ -1,4 +1,4 @@
-params ["_player", "_duration"];
+params ["_player", ["_duration", 10]];
 
 if !(local _player) then {
 	_this remoteExecCall ["grad_user_fnc_hellfire", _player, false];
@@ -15,6 +15,11 @@ private _direction = 0;
  
 for "_i" from 1 to _count do { 
 	private _newPos = _pos getPos [15, _direction]; 
+
+	private _heightASL = getTerrainHeightASL _newPos;
+	if ((_newPos select 2) <= (_heightASL select 2)) then {
+		_newPos set [2, (_heightASL select 2) + 0.3];
+	};
  	_positions pushBack _newPos; 
  	_direction = _direction + _angle; 
 }; 
