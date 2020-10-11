@@ -5,9 +5,16 @@ if !(canSuspend) exitWith { _this spawn grad_user_fnc_monitorEffects; };
 if (_monitoring) then {
 	private _id = [{
 		{
-			private _unitTextArray = _x getVariable ["GRAD_UNMRE_effectsPlayed", []];
+			private _unit = _x;
+			private _unitTextArray = [];
+			{
+				
+				private _timesPlayed = _unit getVariable ["GRAD_UMRE_" + _x, 1];
+				_unitTextArray pushBackUnique (str(_timesPlayed) + "x " + _x);
+				
+			} forEach (_unit getVariable ["GRAD_UNMRE_effectsPlayed", []]);
 			private _unitText = _unitTextArray joinString " • ";
-			private _iconPos = ASLtoAGL getPosASL _x;
+			private _iconPos = ASLtoAGL getPosASL _unit;
 			if (_unitText != "") then {
 				drawIcon3D ["", [1,1,1,0.5], [_iconPos # 0, _iconPos # 1, (_iconPos # 2) - 1], 1, 2, 0, _unitText, 2, 0.03, "RobotoCondensed","center"];
 			};		

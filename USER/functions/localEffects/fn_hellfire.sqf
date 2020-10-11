@@ -17,8 +17,8 @@ for "_i" from 1 to _count do {
 	private _newPos = _pos getPos [15, _direction]; 
 
 	private _heightASL = getTerrainHeightASL _newPos;
-	if ((_newPos select 2) <= (_heightASL select 2)) then {
-		_newPos set [2, (_heightASL select 2) + 0.3];
+	if ((_newPos select 2) <= (_heightASL)) then {
+		_newPos set [2, (_heightASL) + 0.3];
 	};
  	_positions pushBack _newPos; 
  	_direction = _direction + _angle; 
