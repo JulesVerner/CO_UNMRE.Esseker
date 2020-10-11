@@ -4,6 +4,8 @@ if !(local _player) then {
 	_this remoteExecCall ["grad_user_fnc_hellfire", _player, false];
 };
 
+[player, "hellfire"] call grad_user_fnc_setVariable;
+
 private _pos = getPos _player; 
 private _count = 60; 
 private _positions = []; 

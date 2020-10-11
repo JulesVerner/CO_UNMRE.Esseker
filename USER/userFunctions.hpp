@@ -12,6 +12,7 @@ class GRAD_USER {
 		class twitching {};
 		class floatingHead {};
 		class hellfire {};
+		class setVariable {};
 		class skeletonRushing {};
 		class headFountain {};
 		class skinUnits {};

@@ -2,9 +2,7 @@ params [["_minDist", 15], ["_maxDist", 20]];
 
 if !(canSuspend) exitWith { _this spawn grad_user_fnc_skeletonRushing; };
 
-private _GRAD_UNMRE_effectsPlayed = player getVariable ["GRAD_UNMRE_effectsPlayed", []];
-_GRAD_UNMRE_effectsPlayed pushBackUnique "skeletonRushing";
-player setVariable ["GRAD_UNMRE_effectsPlayed", _GRAD_UNMRE_effectsPlayed];
+[player, "skeletonRushing"] call grad_user_fnc_setVariable;
 
 private _spawnPos = [];
 private _suitablePositionFound = false;

@@ -56,6 +56,16 @@
 	}
 ] call zen_custom_modules_fnc_register;
 
+[
+	"GRAD local effects",
+	"Hellfire", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+	if !(isPlayer _attachedObject) exitWith { hint "Has to be placed on a player!"};
+	[[], grad_user_fnc_hellfire] remoteExec ["spawn", _attachedObject, false];
+	}
+] call zen_custom_modules_fnc_register;
+
 
 
 ["GRAD local effects", "Monitor Effects", {
