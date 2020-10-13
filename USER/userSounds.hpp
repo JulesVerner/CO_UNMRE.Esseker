@@ -71,3 +71,13 @@ class scream_12: scream_1
 	name = "scream_12";
 	sound[] = { "USER\sounds\scream_12.ogg", 10, 1 };
 };
+class intro_song
+{
+	name = "intro_song";
+	sound[] = { "USER\sounds\intro_song.ogg", 3, 1 };
+};
+class falls
+{
+	name = "falls";
+	sound[] = { "USER\sounds\falls.ogg", 1, 1 };
+};

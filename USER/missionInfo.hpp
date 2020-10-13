@@ -8,3 +8,22 @@ onLoadMission = "";                                                             
 loadScreen = "data\loadpic.paa";                                                // Ladebild
 overviewPicture = "";                                                           // Bild, das in der Missionsauswahl angezeigt wird
 overviewText = "United Nations Mission in the Republic of Esseker";        // Text, der in der Missionsauswahl angezeigt wird
+
+
+class CfgSFX
+{
+    class waterSplash
+    {
+        sound0[] = {"USER\sounds\falls.ogg", db+6, 1.0, 1000, 1, 0, 0, 0};  // path to addon sound
+        sounds[] = {sound0};
+        empty[] = {};
+    };
+};
+
+class CfgVehicles
+{
+    class waterSplashSource // class name to be used with createSoundSource
+    {
+        sound = "waterSplash"; // reference to CfgSFX class
+    };
+};

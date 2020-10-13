@@ -25,6 +25,32 @@ class GRAD_USER {
 	};	
 };
 
+class GRAD_introCam {
+	tag = "grad_introcam";
+
+    class client {
+            file = "USER\functions\intro\functions\client";
+
+            class camAttached;
+            class camCommands;
+            class camFree;
+            class camRotate;
+            class clientInit { preInit = 1; };
+            class play;
+            class start;
+            class textEffects;
+            class waterFX;
+    };
+
+    class server {
+            file = "USER\functions\intro\functions\server";
+
+            class addShot;
+            class init { postInit = 1; };
+            class shotDefinitions;
+    };
+};
+
 
 class GRAD_zeusModules {
 	tag = "grad_zeus";

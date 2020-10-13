@@ -1,0 +1,2 @@
+call GRAD_introCam_fnc_shotDefinitions;
+call GRAD_introCam_fnc_play;
