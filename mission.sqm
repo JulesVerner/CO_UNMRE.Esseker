@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2203;
+		nextID=2205;
 	};
 	class MarkerIDProvider
 	{
-		nextID=11;
+		nextID=13;
 	};
 	class LayerIndexProvider
 	{
-		nextID=486;
+		nextID=508;
 	};
 	class Camera
 	{
-		pos[]={9495.6709,88.792732,4028.5144};
-		dir[]={0.033942997,-0.74782294,0.66303134};
-		up[]={0.038233731,0.66389745,0.74684536};
-		aside[]={0.99869311,-1.0535587e-008,-0.051126704};
+		pos[]={8191.02,79.568825,5181.4653};
+		dir[]={-0.86942893,-0.40992585,-0.27580619};
+		up[]={-0.3907392,0.91211736,-0.12395284};
+		aside[]={-0.3023788,-1.6856939e-007,0.95319569};
 	};
 };
 binarizationWanted=0;
@@ -6905,23 +6905,23 @@ class Mission
 	class Intel
 	{
 		resistanceWest=0;
-		timeOfChanges=1800.0002;
+		timeOfChanges=5400;
 		startWeather=0.087652989;
 		startFog=0.10440936;
 		startWind=0.1;
 		startWaves=0.1;
 		forecastWeather=0.087652989;
 		forecastFog=0.10109904;
-		forecastWind=0.1;
+		forecastWind=0.90231818;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		rainForced=1;
 		lightningsForced=1;
 		wavesForced=1;
 		windForced=1;
-		year=2035;
+		year=2025;
 		month=7;
-		day=6;
+		day=26;
 		hour=19;
 		minute=0;
 		startFogDecay=0.0099999998;
@@ -6929,7 +6929,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=493;
+		items=495;
 		class Item0
 		{
 			dataType="Layer";
@@ -7121,12 +7121,12 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1000.2913,5,2897.6482};
+						position[]={1001.9141,148.7979,2897.2793};
+						angles[]={6.276526,0,0.084794596};
 					};
 					name="zeusModule_adminVoted";
 					id=21;
 					type="ModuleCurator_F";
-					atlOffset=-143.66241;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8145,7 +8145,7 @@ class Mission
 				};
 			};
 			id=729;
-			atlOffset=-164.01442;
+			atlOffset=-163.97934;
 		};
 		class Item2
 		{
@@ -32379,6 +32379,33 @@ class Mission
 			id=2202;
 			type="Land_VehicleTrack_01_straight_start_F";
 			atlOffset=-2.8610229e-005;
+		};
+		class Item493
+		{
+			dataType="Marker";
+			position[]={8621.4775,0,5092.771};
+			name="marker_11";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorWEST";
+			alpha=0.69999999;
+			a=250;
+			b=71;
+			angle=190.43828;
+			id=2203;
+			atlOffset=34.03072;
+		};
+		class Item494
+		{
+			dataType="Marker";
+			position[]={8625.0254,0.47400001,5091.3281};
+			name="marker_12";
+			text="DZ Drava";
+			type="hd_pickup";
+			colorName="ColorWEST";
+			alpha=0.69999999;
+			id=2204;
+			atlOffset=34.198936;
 		};
 	};
 	class Connections
