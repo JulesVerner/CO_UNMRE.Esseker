@@ -17,6 +17,7 @@ class GRAD_USER {
 		class headFountain {};
 		class skinUnits {};
 		class sparks {};
+		class wasserEffect {};
 	};
 
 	class Airfield {
