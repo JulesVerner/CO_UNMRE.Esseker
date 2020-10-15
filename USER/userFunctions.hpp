@@ -17,13 +17,18 @@ class GRAD_USER {
 		class headFountain {};
 		class skinUnits {};
 		class sparks {};
-		class wasserEffect {};
 	};
 
 	class Airfield {
 		file = "USER\functions\Airfield";
 		class startExfil {};
 	};	
+
+	class PVMC {
+		file = "USER\functions\pvmc";
+		class wasserEffect {};
+		class camera {};
+	};
 };
 
 class GRAD_introCam {
