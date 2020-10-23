@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=530;
+		nextID=574;
 	};
 	class Camera
 	{
-		pos[]={10333.163,121.11278,5377.7793};
-		dir[]={0.91626281,-0.34709826,0.20050034};
-		up[]={0.33914357,0.93779802,0.074211746};
-		aside[]={0.21378632,-6.7200745e-008,-0.97698402};
+		pos[]={5807.8218,13.00406,5501.1406};
+		dir[]={0.81127626,-0.35242558,0.46652916};
+		up[]={0.3055239,0.93583369,0.17569321};
+		aside[]={0.49851203,-1.2526289e-007,-0.86689162};
 	};
 };
 binarizationWanted=0;
@@ -27877,7 +27877,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=1982;
 			type="Sign_Arrow_Direction_F";
@@ -28046,7 +28046,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=1996;
 			type="Sign_Arrow_Direction_F";
@@ -28086,7 +28086,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=1997;
 			type="Sign_Arrow_Direction_F";
@@ -28126,7 +28126,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=1998;
 			type="Sign_Arrow_Direction_F";
@@ -28160,17 +28160,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5774.4541,1.6433865,5461.25};
-				angles[]={0,0.54815102,0};
+				position[]={5774.4541,1.6434914,5461.25};
+				angles[]={0,0.54815555,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=1999;
 			type="Sign_Arrow_Direction_F";
-			atlOffset=6.2497821;
+			atlOffset=6.249887;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28231,7 +28231,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ObjectMaterialCustom0";
+					expression="_this setObjectMaterialGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02_destruct.rvmat";
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item300
@@ -28270,7 +28289,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ObjectMaterialCustom0";
+					expression="_this setObjectMaterialGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02_tracks_destruct.rvmat";
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item301
@@ -28309,7 +28347,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ObjectMaterialCustom0";
+					expression="_this setObjectMaterialGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02_turret_destruct.rvmat";
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item302
@@ -28348,7 +28405,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ObjectMaterialCustom0";
+					expression="_this setObjectMaterialGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02_turret_destruct.rvmat";
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item303
@@ -28387,7 +28463,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ObjectMaterialCustom0";
+					expression="_this setObjectMaterialGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02_destruct.rvmat";
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item304
@@ -28442,7 +28537,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02.rvmat";
+							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02_tracks_destruct.rvmat";
 						};
 					};
 				};
@@ -28500,7 +28595,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02.rvmat";
+							value="A3\Armor_F_Gamma\MBT_02\Data\MBT_02_tracks_destruct.rvmat";
 						};
 					};
 				};
@@ -28766,7 +28861,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2031;
 			type="Sign_Arrow_Direction_F";
@@ -28806,7 +28901,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2032;
 			type="Sign_Arrow_Direction_F";
@@ -28846,7 +28941,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2034;
 			type="Sign_Arrow_Direction_F";
@@ -28886,7 +28981,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2035;
 			type="Sign_Arrow_Direction_F";
@@ -28926,7 +29021,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2036;
 			type="Sign_Arrow_Direction_F";
@@ -28966,7 +29061,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2037;
 			type="Sign_Arrow_Direction_F";
@@ -29006,7 +29101,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2038;
 			type="Sign_Arrow_Direction_F";
@@ -29046,7 +29141,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2039;
 			type="Sign_Arrow_Direction_F";
@@ -29086,7 +29181,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this] call GRAD_introCam_fnc_waterFX;}";
+				init="call{[this] call grad_introFX_fnc_waterFX;}";
 			};
 			id=2040;
 			type="Sign_Arrow_Direction_F";
@@ -32468,7 +32563,7 @@ class Mission
 			};
 			id=2221;
 			type="rhsusf_M1078A1P2_B_M2_WD_fmtv_usarmy";
-			atlOffset=-3.8146973e-006;
+			atlOffset=0.0020580292;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32998,7 +33093,7 @@ class Mission
 			};
 			id=2252;
 			type="rhsusf_M1078A1P2_B_M2_WD_fmtv_usarmy";
-			atlOffset=5.7220459e-006;
+			atlOffset=0.0020656586;
 			class CustomAttributes
 			{
 				class Attribute0

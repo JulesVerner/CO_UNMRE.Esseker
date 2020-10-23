@@ -2,6 +2,10 @@ params ["_angleStart", "_angleEnd", "_target1", "_target2", "_duration", "_zoom1
 
 private _timeBegin = time;
 
+if (typeName _target2 == "CODE") then {
+    _target2 = call _target2;
+};
+
 private _targetPos = if (_target2 isEqualType []) then {_target2} else {getPos _target2};
 private _coords = _targetPos getPos [_radius,_angle];
 

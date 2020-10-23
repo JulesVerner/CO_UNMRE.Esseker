@@ -22,41 +22,18 @@ class GRAD_USER {
 	class Airfield {
 		file = "USER\functions\Airfield";
 		class startExfil {};
-	};	
-
-	class PVMC {
-		file = "USER\functions\pvmc";
-		class wasserEffect {};
-		class camera {};
 	};
 };
 
-class GRAD_introCam {
-	tag = "grad_introcam";
+class GRAD_introFX {
+    tag = "grad_introFX";
 
-    class client {
-            file = "USER\functions\intro\functions\client";
-
-            class camAttached;
-            class camCommands;
-            class camFree;
-            class camRotate;
-            class clientInit { preInit = 1; };
-            class play;
-            class start;
-            class textEffects;
-            class waterFX;
-    };
-
-    class server {
-            file = "USER\functions\intro\functions\server";
-
-            class addShot;
-            class init { postInit = 1; };
-            class shotDefinitions;
+    class intro {
+        file = "USER\functions\intro\functions\client";
+        class waterFX {};
+        class textEffects;
     };
 };
-
 
 class GRAD_zeusModules {
 	tag = "grad_zeus";
