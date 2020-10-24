@@ -26,7 +26,7 @@ GRAD_introCam_allowForJIP = false;
 GRAD_introCam_shotDefinitions = [
     ["CAMERA", 0, intro_camPos_0, intro_camTarget_0, .6, true, false, 1],
     ["MOVE", 0, intro_camPos_0, intro_camTarget_1, .6],
-    ["MOVE", 9, intro_camPos_1, intro_camTarget_1, .6],
+    ["MOVE", 8, intro_camPos_1, intro_camTarget_1, .6],
     ["MOVE", 22, intro_camPos_2, intro_camTarget_2, .4],
     ["MOVE", 15, intro_camPos_2, intro_camTarget_3, .4],
     ["MOVE", 15, intro_camPos_3, ace_player, .1],
@@ -72,16 +72,20 @@ for "_i" from 1 to 4 do {
     _heli setPilotLight true;
     _heli setBehaviour "CARELESS";
     _heli setSpeedMode "SLOW";
-    _heli flyInHeight 20;
-    _heli flyInHeightASL [30,30,30];
+    _heli flyInHeight 10;
+    _heli flyInHeightASL [20,20,20];
     _heli animateSource ["slingloadlights_source", 1];
     _heli disableAI "AUTOCOMBAT";
     _heli allowDamage false;
+    _heli setVariable ["ace_map_hideBlueForceMarker", true, true];
+
+    [_heli] execVM "USER\functions\intro\functions\client\fn_enforceGearUp.sqf";
 
     private _boat = createVehicle ["rhsgref_hidf_rhib", [0,0,0], [], 0, "NONE"];
     _position set [2,20];
     _boat setPos _position;
     _heli setSlingLoad _boat;
+    _heli setVariable ["introCamBoat", _boat, true];
     _boat setVariable ["introCamHeli", _heli, true];
     _boat allowDamage false;
 
@@ -97,21 +101,18 @@ for "_i" from 1 to 4 do {
         private _marker = format ["mrk_intro_heli_wp_%1_%2", _i, _j];
       
         private _position =  getMarkerPos _marker;
-        _position set [2,10];
+        _position set [2,20];
 
          // terrain height
         private _wp = _group addWaypoint [_position, -1]; // negative to make ASL
-        _wp setWaypointType "LOITER";
-        _wp setWaypointLoiterType "CIRCLE";
-        _wp setWaypointLoiterRadius 1;
-        _wp setWaypointLoiterAltitude 20;
+        _wp setWaypointType "MOVE";
 
         diag_log format ["adding waypoint at %1", _position];
 
         if (_j == 4) then {
-            _position set [2,0];
+            _position set [2,10];
             _wp setWaypointType "MOVE";
-            _wp setWaypointStatements ["true", "(vehicle this) land 'land'; [{(vehicle (_this select 0)) setSlingLoad objNull;}, [this], 5] call CBA_fnc_waitAndExecute;"];
+            _wp setWaypointStatements ["true", "(vehicle this) land 'land'; [vehicle this] execVM 'user\functions\intro\functions\client\fn_heliland.sqf';"];
             _wp setWPPos _position;
         };
     };
