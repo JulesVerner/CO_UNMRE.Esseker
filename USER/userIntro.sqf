@@ -24,24 +24,26 @@ GRAD_introCam_allowForJIP = false;
 */
 
 GRAD_introCam_shotDefinitions = [
-    ["CAMERA", 0, intro_camPos_0, intro_camTarget_0, .6, true, true, 1],
-    ["ROTATE", 15, vehicle player, 0, 5, 90, 270, true],
-    ["MOVE", 1, intro_camPos_1, intro_camTarget_1, .6],
-    ["MOVE", 25, intro_camPos_2, intro_camTarget_2, .4],
+    ["CAMERA", 0, intro_camPos_0, intro_camTarget_0, .6, true, false, 1],
+    ["MOVE", 0, intro_camPos_0, intro_camTarget_1, .6],
+    ["MOVE", 9, intro_camPos_1, intro_camTarget_1, .6],
+    ["MOVE", 22, intro_camPos_2, intro_camTarget_2, .4],
     ["MOVE", 15, intro_camPos_2, intro_camTarget_3, .4],
     ["MOVE", 15, intro_camPos_3, ace_player, .1],
     ["BLEND", 10, ["DYNAMIC", "<t color='#ffffff' size = '1'>UN-Friedenstruppen auf dem Weg ins Einsatzgebiet</t>",-1,safeZoneY-safeZoneY/2,6,1,0], -1, -1],
-    ["ROTATE", 15, ace_player, 0, 5, 90, 270, true],
-    ["CAMERA", 10, intro_camPos_2, ace_player, .6, true, true, 1]
+    ["ROTATE", 15, vehicle player, 0, 10, 90, 270, 0.6, true],
+    ["CAMERA", 15, intro_camPos_2, ace_player, .6, true, true, 1]
 ];
 
 ["CBA_loadingScreenDone", {
     [] spawn {
         
+        if (!didJIP) then {
+            0 fadeSound 0;
+            cutText ["", "BLACK IN", 20];
 
-        titleText ["", "BLACK IN", 20];
-
-        [] spawn GRAD_introFX_fnc_textEffects;
+            [] spawn GRAD_introFX_fnc_textEffects;
+        };
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -70,6 +72,7 @@ for "_i" from 1 to 4 do {
     _heli setPilotLight true;
     _heli setBehaviour "CARELESS";
     _heli setSpeedMode "SLOW";
+    _heli flyInHeight 20;
     _heli flyInHeightASL [30,30,30];
     _heli animateSource ["slingloadlights_source", 1];
     _heli disableAI "AUTOCOMBAT";
@@ -94,15 +97,22 @@ for "_i" from 1 to 4 do {
         private _marker = format ["mrk_intro_heli_wp_%1_%2", _i, _j];
       
         private _position =  getMarkerPos _marker;
-        _position set [2,30]; // terrain height
+        _position set [2,10];
+
+         // terrain height
         private _wp = _group addWaypoint [_position, -1]; // negative to make ASL
+        _wp setWaypointType "LOITER";
+        _wp setWaypointLoiterType "CIRCLE";
+        _wp setWaypointLoiterRadius 1;
+        _wp setWaypointLoiterAltitude 20;
 
         diag_log format ["adding waypoint at %1", _position];
 
         if (_j == 4) then {
-            _wp setWaypointStatements ["true", "vehicle this setSlingLoad objNull;"];
-            _position set [2,25];
-            _wp setWaypointPosition [_position, 0];
+            _position set [2,0];
+            _wp setWaypointType "MOVE";
+            _wp setWaypointStatements ["true", "(vehicle this) land 'land'; [{(vehicle (_this select 0)) setSlingLoad objNull;}, [this], 5] call CBA_fnc_waitAndExecute;"];
+            _wp setWPPos _position;
         };
     };
 };
