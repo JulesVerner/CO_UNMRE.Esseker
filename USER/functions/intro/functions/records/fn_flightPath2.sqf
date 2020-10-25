@@ -13,6 +13,20 @@ _heli setSlingLoad _boat;
 [{
     params ["_heli", "_boat"];
 
+    _heli animateSource ['slingloadlights_source', 0];
+
+}, [_heli, _boat], 88] call CBA_fnc_waitAndExecute;
+
+[{
+    params ["_heli", "_boat"];
+
     _heli setSlingLoad objNull;
 
 }, [_heli, _boat], 92] call CBA_fnc_waitAndExecute;
+
+[{
+    params ["_heli", "_boat"];
+
+    _heli animateSource ['slingloadlights_source', 0];
+
+}, [_heli, _boat], 96] call CBA_fnc_waitAndExecute;
