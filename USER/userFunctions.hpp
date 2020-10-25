@@ -32,6 +32,7 @@ class GRAD_introFX {
         file = "USER\functions\intro\functions\client";
         class waterFX {};
         class textEffects;
+        class muteAndDark { postInit = 1;};
     };
 };
 

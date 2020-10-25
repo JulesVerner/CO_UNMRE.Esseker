@@ -39,10 +39,10 @@ GRAD_introCam_shotDefinitions = [
     [] spawn {
         
         if (!didJIP) then {
-            0 fadeSound 0;
-            cutText ["", "BLACK IN", 20];
 
             [] spawn GRAD_introFX_fnc_textEffects;
+        } else {
+
         };
     };
 }] call CBA_fnc_addEventHandler;
@@ -88,11 +88,21 @@ for "_i" from 1 to 4 do {
     _boat setVariable ["introCamHeli", _heli, true];
     _boat allowDamage false;
 
+    [{
+        params ["_heli"];
+        (isNull (getSlingLoad _heli))
+    },{
+        params ["_heli", "_boat"];
+        if (!(_heli getVariable ["boatDropped", false])) then {
+            _heli setSlingLoad _boat;
+        };
+    }, [_heli, _boat]] call CBA_fnc_waitUntilAndExecute;
+
     {
-        if (_boat emptyPositions "cargo" > 0) then {
+        if (_boat emptyPositions "cargo" > 0 && !(_x getVariable ["playerPlacedInBoat", false])) then {
             _x moveInAny _boat;
             _x allowDamage false;
-            _allPlayers deleteAt (_allPlayers find _x);
+            _x setVariable ["playerPlacedInBoat", true];
         };
     } forEach _allPlayers;
 

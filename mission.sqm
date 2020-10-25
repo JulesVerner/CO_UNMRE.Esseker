@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=618;
+		nextID=640;
 	};
 	class Camera
 	{
-		pos[]={8061.6743,3.6951771,5322.2417};
-		dir[]={-0.99915767,-0.032011412,0.028175928};
-		up[]={-0.032049816,0.99948186,0.00090413238};
-		aside[]={0.028192068,-2.7590431e-008,0.99966568};
+		pos[]={11362.496,181.65054,632.09991};
+		dir[]={-0.63004047,-0.69829959,0.33975887};
+		up[]={-0.61462784,0.71580398,0.33144704};
+		aside[]={0.47465056,1.4831312e-007,0.88017881};
 	};
 };
 binarizationWanted=0;
@@ -34061,13 +34061,14 @@ class Mission
 		class Item507
 		{
 			dataType="Trigger";
-			position[]={8541.8271,0.56207657,5112.8311};
-			angle=1.7436008;
+			position[]={8615.7227,0.59235764,5099.9849};
+			angle=3.4594336;
 			class Attributes
 			{
+				name="trg_dropzone";
 				condition="call{this}";
-				onActivation="call{{ if (_x isKindOf ""Air"") then { _x setSlingLoad objNull; _x animateSource ['slingloadlights_source', 0]; }} forEach thisList;}";
-				sizeA=200;
+				sizeA=250;
+				sizeB=80;
 				repeatable=1;
 				activationBy="ANY";
 				isRectangle=1;
@@ -34075,7 +34076,7 @@ class Mission
 			};
 			id=2303;
 			type="EmptyDetectorAreaR50";
-			atlOffset=40.740002;
+			atlOffset=35.442001;
 		};
 		class Item508
 		{
