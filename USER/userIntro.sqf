@@ -24,15 +24,15 @@ GRAD_introCam_allowForJIP = false;
 */
 
 GRAD_introCam_shotDefinitions = [
-    ["CAMERA", 0, intro_camPos_0, intro_camTarget_0, .6, true, false, 1],
+    ["CAMERA", 0, intro_camPos_0, intro_camTarget_0, .6, true, false],
     ["MOVE", 0, intro_camPos_0, intro_camTarget_1, .6],
     ["MOVE", 8, intro_camPos_1, intro_camTarget_1, .6],
-    ["MOVE", 22, intro_camPos_2, intro_camTarget_2, .4],
+    ["MOVE", 20, intro_camPos_2, intro_camTarget_2, .4],
     ["MOVE", 15, intro_camPos_2, intro_camTarget_3, .4],
-    ["MOVE", 15, intro_camPos_3, ace_player, .1],
-    ["BLEND", 10, ["DYNAMIC", "<t color='#ffffff' size = '1'>UN-Friedenstruppen auf dem Weg ins Einsatzgebiet</t>",-1,safeZoneY-safeZoneY/2,6,1,0], -1, -1],
+    ["MOVE", 5, intro_camPos_3, ace_player, .1],
+    ["BLEND", 5, ["DYNAMIC", "<t color='#ffffff' size = '1'>UN-Friedenstruppen auf dem Weg ins Einsatzgebiet</t>",-1,safeZoneY-safeZoneY/2,6,1,0], -1, -1],
     ["ROTATE", 15, vehicle player, 0, 10, 90, 270, 0.6, true],
-    ["CAMERA", 15, intro_camPos_2, ace_player, .6, true, true, 1]
+    ["CAMERA", 15, intro_camPos_5, ace_player, .6, true, true, 1]
 ];
 
 ["CBA_loadingScreenDone", {
@@ -96,6 +96,10 @@ for "_i" from 1 to 4 do {
         };
     } forEach _allPlayers;
 
+    private _flightPath = format ["fn_flightPath%1.sqf", _i];
+
+    [_heli, _boat] execVM ("user\functions\intro\functions\records\" + _flightPath);
+    /*
     for "_j" from 1 to 6 do {
         private _marker = format ["mrk_intro_heli_wp_%1_%2", _i, _j];
       
@@ -115,6 +119,7 @@ for "_i" from 1 to 4 do {
             _wp setWPPos _position;
         };
     };
+    */
 };
 
 
