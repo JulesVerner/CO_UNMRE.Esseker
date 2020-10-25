@@ -78,8 +78,7 @@ for "_i" from 1 to 4 do {
     _heli disableAI "AUTOCOMBAT";
     _heli allowDamage false;
     _heli setVariable ["ace_map_hideBlueForceMarker", true, true];
-
-    [_heli] execVM "USER\functions\intro\functions\client\fn_enforceGearUp.sqf";
+    _heli animateSource ["warn_hook_1_1_source",1,true];
 
     private _boat = createVehicle ["rhsgref_hidf_rhib", [0,0,0], [], 0, "NONE"];
     _position set [2,20];
@@ -111,8 +110,8 @@ for "_i" from 1 to 4 do {
 
         if (_j == 4) then {
             _position set [2,10];
-            _wp setWaypointType "MOVE";
-            _wp setWaypointStatements ["true", "(vehicle this) land 'land'; [vehicle this] execVM 'user\functions\intro\functions\client\fn_heliland.sqf';"];
+            _wp setWaypointType "LOAD";
+            _wp setWaypointStatements ["true", "[vehicle this] execVM 'user\functions\intro\functions\client\fn_heliland.sqf';"];
             _wp setWPPos _position;
         };
     };

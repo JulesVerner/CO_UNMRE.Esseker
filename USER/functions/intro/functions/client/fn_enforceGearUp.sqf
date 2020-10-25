@@ -1,19 +1,15 @@
 params ["_heli"];
 
-private _handle = [{
-    params ["_args", "_handle"];
-    _args params ["_heli"];
+_heli addEventHandler ["Gear", {
+    params ["_vehicle", "_gearState"];
 
-    if (isNull _heli) exitWith {
-        [_handle] call CBA_fnc_removePerFrameHandler;
+    if (_gearState) then {
+        (selectRandom allPlayers) Action ["landgearup",_heli]; 
+        private _wps = waypoints _heli;
+        private _pilot = driver _heli;
+        _pilot setdamage 1;
+        deleteVehicle _pilot;
+        createVehicleCrew _heli;
+        { _heli addWaypoint _x; } forEach _wps;
     };
-
-    if (_heli animationPhase "ind_gear_1_1_anim" < 1) then {
-        _heli animateSource ['ind_gear_1_1_anim', 1];
-    };
-
-    if (_heli animationPhase "ind_gear_1_2_anim" < 1) then {
-        _heli animateSource ['ind_gear_1_2_anim', 1];
-    };
-
-}, 0, [_heli]] call CBA_fnc_addPerFrameHandler;
+}];
