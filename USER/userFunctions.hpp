@@ -23,6 +23,12 @@ class GRAD_USER {
 		file = "USER\functions\Airfield";
 		class startExfil {};
 	};
+
+	class PVMC {
+		file = "USER\functions\pvmc";
+		class wasserEffect {};
+		class cameras {};
+	};
 };
 
 class GRAD_introFX {
