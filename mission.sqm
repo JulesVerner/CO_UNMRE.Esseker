@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2377;
+		nextID=2378;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=662;
+		nextID=684;
 	};
 	class Camera
 	{
-		pos[]={6642.667,317.49026,4024.4192};
-		dir[]={0.018052157,-0.94079864,-0.33850726};
-		up[]={0.050099943,0.33896303,-0.93946439};
-		aside[]={-0.998586,3.4712139e-007,-0.053252533};
+		pos[]={6551.1646,308.27859,3877.6189};
+		dir[]={0.43430308,-0.6764645,0.59481454};
+		up[]={0.39891443,0.73646092,0.54634708};
+		aside[]={0.80763787,-1.0745134e-007,-0.58969706};
 	};
 };
 binarizationWanted=0;
@@ -6958,7 +6958,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=577;
+		items=578;
 		class Item0
 		{
 			dataType="Layer";
@@ -13543,7 +13543,7 @@ class Mission
 			};
 			id=1602;
 			type="Land_Pliers_F";
-			atlOffset=1.1231136;
+			atlOffset=1.1231146;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35498,6 +35498,21 @@ class Mission
 			};
 			id=2376;
 			type="Land_DeskChair_01_olive_F";
+		};
+		class Item577
+		{
+			dataType="Trigger";
+			position[]={6582.186,252.6416,3915.3159};
+			class Attributes
+			{
+				name="trg_landingzonePMC";
+				sizeA=10;
+				sizeB=10;
+				sizeC=0;
+				isRectangle=1;
+			};
+			id=2377;
+			type="EmptyDetectorArea10x10";
 		};
 	};
 	class Connections

@@ -1,4 +1,17 @@
 [
+	"GRAD mission events",
+	"Ghost Hawk Crash", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+	
+	[] remoteExec ["grad_user_fnc_specOpsInsertion", 2, false];
+	hintSilent "spec ops insertion started";
+	}
+] call zen_custom_modules_fnc_register;
+
+
+
+[
 	"GRAD local effects",
 	"Rushing Skeleton", 
 	{ 

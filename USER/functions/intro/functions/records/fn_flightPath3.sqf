@@ -31,7 +31,7 @@ params ["_heli", "_boat"];
 },{
     params ["_heli", "_boat"];
 
-    deleteVehicleCrew _heli;
+    { _heli deleteVehicleCrew _x } forEach crew _heli;
     deleteVehicle _heli;
 
 }, [_heli, _boat]] call CBA_fnc_waitUntilAndExecute;
