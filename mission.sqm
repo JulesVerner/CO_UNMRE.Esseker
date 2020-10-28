@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2426;
+		nextID=2428;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=706;
+		nextID=728;
 	};
 	class Camera
 	{
-		pos[]={10604.465,10.441733,5275.8799};
-		dir[]={0.7300424,-0.67861903,-0.082218848};
-		up[]={0.6743741,0.73446321,-0.075948834};
-		aside[]={-0.11192831,5.7865691e-008,-0.99382871};
+		pos[]={10080.86,47.643078,4858.9067};
+		dir[]={-0.63306224,-0.71201664,0.30382288};
+		up[]={-0.64191717,0.70215905,0.30807352};
+		aside[]={0.43268663,-2.9450166e-007,0.9015705};
 	};
 };
 binarizationWanted=0;
@@ -117,7 +117,8 @@ addons[]=
 	"A3_Props_F_Enoch_Military_Decontamination",
 	"A3_Structures_F_EPB_Naval_Fishing",
 	"A3_Props_F_Exp_Naval_Boats",
-	"A3_Air_F_Exp_VTOL_01"
+	"A3_Air_F_Exp_VTOL_01",
+	"A3_Structures_F_EPA_Items_Food"
 };
 class AddonsMetaData
 {
@@ -6975,7 +6976,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=593;
+		items=594;
 		class Item0
 		{
 			dataType="Layer";
@@ -35916,6 +35917,23 @@ class Mission
 			id=2420;
 			type="B_T_VTOL_01_infantry_F";
 			atlOffset=-8.1062317e-006;
+		};
+		class Item593
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10612.794,2.1774809,5275.6118};
+				angles[]={6.0638041,0,6.2393289};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2426;
+			type="Land_BottlePlastic_V2_F";
+			atlOffset=7.0095062e-005;
 		};
 	};
 	class Connections

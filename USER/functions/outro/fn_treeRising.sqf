@@ -5,6 +5,8 @@ _position = getPos _trigger;
 
 TREE_RISING_ACTIVATION_RADIUS = triggerArea _trigger select 0;
 
+private _levitateTreeSpeed = 0.1;
+
 ALL_TREES = [];
 HIDDEN_TREES = [];
 DEBUG_SLEEP = 3;

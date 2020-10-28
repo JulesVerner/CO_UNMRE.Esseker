@@ -9,15 +9,15 @@ if (!canSuspend) exitWith {
 // systemChat "läuft";
 
 private _levitateBaseSpeed = 0.1;
-private _levitateTreeSpeed = 0.1;
-FISH_RISING_ACTIVATION_RADIUS = 200;
 
 ALL_FISHES = [];
 
 DEBUG_DURATION = 60;
 
-playMusic "";
-playMusic "Music_Theme_Contact";
+if (_frequency > 2) then {
+  playMusic "";
+  playMusic "Music_Theme_Contact";
+};
 
 [_trigger, _levitateBaseSpeed, _frequency] spawn {
     params ["_trigger", "_levitateBaseSpeed", "_frequency"];
@@ -60,6 +60,11 @@ private _handle = [{
         _x setPos [_posX, _posY, _posZ + _speed];
         _x setDir (getDir _x + 0.05);
         [_x, -90, 0] call BIS_fnc_setPitchBank;
+
+        if (_posZ > 200) then {
+            ALL_FISHES deleteAt (ALL_FISHES find _x);
+            deleteVehicle _x;
+        };
 
     } forEach ALL_FISHES;
     
