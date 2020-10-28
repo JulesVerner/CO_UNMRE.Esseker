@@ -1,4 +1,4 @@
-_pond = createSimpleObject ["gm\gm_structures\gm_rivers\gm_pond_01.p3d", [6647.77,3992.72,1.56001], true]; 
+private _pond = createSimpleObject ["gm\gm_structures\gm_rivers\gm_pond_01.p3d", [6647.77,3992.72,1.56001], true]; 
 _pond setPos [6647.77,3992.72,1.56001];
  
 [{ 
@@ -18,7 +18,7 @@ _pond setPos [6647.77,3992.72,1.56001];
         if (_eyePosHightPlayer < _eyePosHight) then {
             _eyePosHight = _eyePosHightPlayer;
         };
-    }forEach (playableUnits + switchableUnits);
+    }forEach allPlayers;
     
     if (_eyePosHight > _pondHightASL) then {
         _pond setPos (_pos vectorAdd [0,0,0.004])
