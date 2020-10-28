@@ -6,6 +6,8 @@ private _vehicle = createVehicle [_vehicleClass, _spawnPos, [], 0, "FLY"];
 _vehicle setDir ((getPos _vehicle) getDir _waypointPos);
 _vehicle action ["lightOn", _vehicle];
 
+missionNamespace setVariable ["outroVTOL", _vehicle, true];
+
 private _vehicleGroup = createVehicleCrew _vehicle;
 _vehicleGroup setBehaviour "CARELESS";
 private _waypoint = _vehicleGroup addWaypoint [_waypointPos, 0];

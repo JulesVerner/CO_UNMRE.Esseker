@@ -52,7 +52,12 @@ if (!isServer) exitWith {};
 
 private _soundSource = createSoundSource ["waterSplashSource", position intro_camTarget_2, [], 0];
 
-private _allPlayers = (playableUnits + switchableUnits);
+private _allGroupsWithPlayers = [];
+{
+    if (side _x == west) then {
+        _allGroupsWithPlayers pushBackUnique group _x
+    };
+} forEach allPlayers;
 
 for "_i" from 1 to 4 do {
 
@@ -99,12 +104,15 @@ for "_i" from 1 to 4 do {
     }, [_heli, _boat]] call CBA_fnc_waitUntilAndExecute;
 
     {
-        if (_boat emptyPositions "cargo" > 0 && !(_x getVariable ["playerPlacedInBoat", false])) then {
-            _x moveInAny _boat;
-            _x allowDamage false;
-            _x setVariable ["playerPlacedInBoat", true];
-        };
-    } forEach _allPlayers;
+        private _groupUnits = units _x;
+        {
+            if (_boat emptyPositions "cargo" > 0 && !(_x getVariable ["playerPlacedInBoat", false])) then {
+                _x moveInAny _boat;
+                _x allowDamage false;
+                _x setVariable ["playerPlacedInBoat", true];
+            };
+        } forEach _groupUnits;
+    } forEach _allGroupsWithPlayers;
 
     private _flightPath = format ["fn_flightPath%1.sqf", _i];
 

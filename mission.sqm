@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2428;
+		nextID=2430;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10080.86,47.643078,4858.9067};
-		dir[]={-0.63306224,-0.71201664,0.30382288};
-		up[]={-0.64191717,0.70215905,0.30807352};
-		aside[]={0.43268663,-2.9450166e-007,0.9015705};
+		pos[]={11311.454,194.10724,4782.7734};
+		dir[]={0.63190061,-0.34132019,-0.69589424};
+		up[]={0.22946756,0.9399364,-0.2527073};
+		aside[]={-0.74035281,5.5739656e-007,-0.67227298};
 	};
 };
 binarizationWanted=0;
@@ -117,14 +117,13 @@ addons[]=
 	"A3_Props_F_Enoch_Military_Decontamination",
 	"A3_Structures_F_EPB_Naval_Fishing",
 	"A3_Props_F_Exp_Naval_Boats",
-	"A3_Air_F_Exp_VTOL_01",
 	"A3_Structures_F_EPA_Items_Food"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=60;
+		items=59;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -506,13 +505,6 @@ class AddonsMetaData
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item59
-		{
-			className="A3_Air_F_Exp";
-			name="Arma 3 Apex - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -6976,7 +6968,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=594;
+		items=592;
 		class Item0
 		{
 			dataType="Layer";
@@ -35753,172 +35745,6 @@ class Mission
 			atlOffset=15.483116;
 		};
 		class Item591
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=5;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10044.406,7.9337254,4871.9141};
-						angles[]={0.0018593199,1.623304,0.0031265267};
-					};
-					side="West";
-					flags=6;
-					class Attributes
-					{
-					};
-					id=2421;
-					type="B_T_Pilot_F";
-					atlOffset=4.7683716e-007;
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10044.406,7.9337249,4871.9141};
-						angles[]={0.0018593199,1.623304,0.0031265267};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2422;
-					type="B_T_Pilot_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10044.406,7.9337249,4871.9141};
-						angles[]={0.0018593199,1.623304,0.0031265267};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2423;
-					type="B_T_Pilot_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10044.406,7.9337249,4871.9141};
-						angles[]={0.0018593199,1.623304,0.0031265267};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2424;
-					type="B_T_Pilot_F";
-				};
-				class Item4
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
-					position[]={12473.613,6.8845849,4623.5923};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=2425;
-					type="Move";
-					atlOffset=1.2397766e-005;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=4;
-				};
-				class Links
-				{
-					items=4;
-					class Item0
-					{
-						linkID=0;
-						item0=2421;
-						item1=2420;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=2422;
-						item1=2420;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=2423;
-						item1=2420;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=2424;
-						item1=2420;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={2};
-						};
-					};
-				};
-			};
-			id=2419;
-			atlOffset=-8.1062317e-006;
-		};
-		class Item592
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10044.386,14.621833,4871.8672};
-				angles[]={0.0018593199,1.623304,0.0031265267};
-			};
-			side="West";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=2420;
-			type="B_T_VTOL_01_infantry_F";
-			atlOffset=-8.1062317e-006;
-		};
-		class Item593
 		{
 			dataType="Object";
 			class PositionInfo
