@@ -26,9 +26,11 @@ class GRAD_USER {
 
 	class PVMC {
 		file = "USER\functions\pvmc";
-		class wasserEffect {};
 		class cameras {};
         class specOpsInsertion;
+		class waterFall {};
+		class waterMgmt {};
+		class waterRise {};
 	};
 };
 
