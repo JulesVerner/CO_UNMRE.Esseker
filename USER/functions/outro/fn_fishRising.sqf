@@ -15,8 +15,7 @@ ALL_FISHES = [];
 DEBUG_DURATION = 60;
 
 if (_frequency > 2) then {
-  playMusic "";
-  playMusic "Music_Theme_Contact";
+  playSound "outro_song";
 };
 
 [_trigger, _levitateBaseSpeed, _frequency] spawn {

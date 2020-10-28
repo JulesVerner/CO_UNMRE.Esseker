@@ -7,7 +7,7 @@ missionNamespace setVariable ["outroVTOL", _vehicle, true];
 
 private _vehicleGroup = createVehicleCrew _vehicle;
 _vehicleGroup setBehaviour "CARELESS";
-private _waypoint = _vehicleGroup addWaypoint [[12221.7,4682.1,121.646], 0];
+private _waypoint = _vehicleGroup addWaypoint [[13272.9,3596.73,357.528], 0];
 _waypoint setWaypointSpeed "FULL";
 
 /*

@@ -77,6 +77,12 @@ class intro_song
 	sound[] = { "USER\sounds\intro_song.ogg", 3, 1 };
 	titles[] = {};
 };
+class outro_song
+{
+	name = "outro_song";
+	sound[] = { "USER\sounds\outro_song.ogg", 3, 1 };
+	titles[] = {};
+};
 class falls
 {
 	name = "falls";
