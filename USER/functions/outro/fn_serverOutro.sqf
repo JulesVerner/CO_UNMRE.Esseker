@@ -14,6 +14,7 @@ _waypoint setWaypointSpeed "FULL";
     above only for debug!
 */
 
+(selectRandom allPlayers) action ["fireInFlame", outro_campfire];
 
 private _VTOL = missionNamespace getVariable ["outroVTOL", objNull];
 

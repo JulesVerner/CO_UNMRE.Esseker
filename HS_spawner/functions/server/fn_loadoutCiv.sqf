@@ -1,16 +1,14 @@
 params ["_unit"];
 
 _googles = [
-    "NWTS_goggle_deer",
-    "NWTS_goggle_deer_bloody",
-    "NWTS_goggle_deer_glow",
-    "NWTS_goggle_deer_mossy"
+    ""
 ];
 
 _headgear = [
-    "",
-    "",
-    "",
+    "NWTS_deer",
+    "NWTS_deer_bloody",
+    "NWTS_deer_glow",
+    "NWTS_deer_mossy",
     "Axe_In_Head"
 ];
 

@@ -1,4 +1,4 @@
-params ["_position", ["_type", "random"], ["_radius", 0]];
+params ["_position", ["_type", "random"], ["_radius", 0],["_classname", "none"]];
 
 
 
@@ -36,7 +36,10 @@ private _allTypes = [
 ];
 
 private _uniform = selectRandom _allTypes;
-private _classname = _uniform; // default
+
+if (_classname != "none") then {
+    _uniform = _classname;
+};
 
 switch (_type) do { 
     case "random" : {

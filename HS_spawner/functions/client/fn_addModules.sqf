@@ -16,7 +16,7 @@ ryanzombiescivilianattacks = true;
 Ryanzombieslogicroam = 1;
 
 
-Ryanzombiesattackspeed = 1;
+Ryanzombiesattackspeed = 0.3;
 Ryanzombiesattackdistance = 2.35;
 Ryanzombiesattackstrenth = 1.5;
 Ryanzombiesdamage = 0.15;
@@ -171,6 +171,48 @@ if (!hasInterface) exitWith {};
             ["HS_SpawnerRandomCivilian", [_position, _speed]] call CBA_fnc_globalEvent;
             
         }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
+
+}] call zen_custom_modules_fnc_register;
+
+["HS_Spawner", "Single Doc", {
+
+    params ["_position", "_object"];
+
+        ["HS Spawner", [
+            [
+                "COMBO", 
+                ["Pick Speed", ""], [
+                [
+                    "random", "slow","crawler","walker","fast","spider"
+                ], [
+                    ["Random", "Random"],
+                    ["Slow", "Slow"],
+                    ["Crawler", "Crawler"],
+                    ["Walker", "Walker"],
+                    ["Fast", "Fast"],
+                    ["Spider", "Spider"]
+            ], 0], true]
+        ], {
+            params ["_dialogValues", "_args"];
+            _args params ["_position"];
+
+            _dialogValues params ["_speed"];
+
+            // hint str _position;
+            ["HS_SpawnerSpecificCivilian", [_position, _speed, "GRAD_CivilianZed_rds_doctor"]] call CBA_fnc_globalEvent;
+            
+        }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
+
+}] call zen_custom_modules_fnc_register;
+
+
+["HS_Spawner", "Pumpkin Joe Zombie", {
+
+    params ["_position", "_object"];
+
+        [position zombie_bloodpool] call HS_spawner_fnc_spawnLightHouseFeed;
+
+        hintsilent "zombie joe spawned";
 
 }] call zen_custom_modules_fnc_register;
 

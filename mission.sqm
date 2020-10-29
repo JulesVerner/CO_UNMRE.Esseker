@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2458;
+		nextID=2464;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7603.2124,243.6434,3636.2529};
-		dir[]={0.81949997,-0.52995002,0.21819949};
-		up[]={0.51211476,0.84802252,0.13635565};
-		aside[]={0.25729972,-3.1432137e-007,-0.9663499};
+		pos[]={10610.003,6.9892645,5280.2134};
+		dir[]={0.24970281,-0.38544515,-0.88831151};
+		up[]={0.10430653,0.92272758,-0.37106714};
+		aside[]={-0.96269339,-8.7311491e-008,-0.27061257};
 	};
 };
 binarizationWanted=0;
@@ -518,7 +518,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -6970,7 +6970,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=612;
+		items=614;
 		class Item0
 		{
 			dataType="Layer";
@@ -13555,7 +13555,7 @@ class Mission
 			};
 			id=1602;
 			type="Land_Pliers_F";
-			atlOffset=1.1231136;
+			atlOffset=1.1231146;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24089,7 +24089,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={9813.6533,15.607856,5587.4121};
-			angle=4.6179128;
+			angle=4.6179123;
 			class Attributes
 			{
 				condition="call{this && (side (thisList # 0) == west)}";
@@ -36928,6 +36928,40 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item612
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10610.19,1.7752259,5273.5688};
+				angles[]={5.9531956,0,6.2652082};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="outro_campfire";
+			};
+			id=2462;
+			type="Land_Campfire";
+			atlOffset=0.00044250488;
+		};
+		class Item613
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6642.106,243.92342,3974.176};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="zombie_bloodpool";
+			};
+			id=2463;
+			type="BloodSplatter_01_Large_New_F";
+			atlOffset=0.32832336;
 		};
 	};
 	class Connections
