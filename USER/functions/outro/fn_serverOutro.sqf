@@ -1,4 +1,4 @@
-
+/*
 private _vehicle = createVehicle ["B_T_VTOL_01_infantry_F", [10068.5,4868.95,0], [], 0, "NONE"];
 _vehicle setDir 90;
 _vehicle action ["lightOn", _vehicle];
@@ -10,7 +10,7 @@ _vehicleGroup setBehaviour "CARELESS";
 private _waypoint = _vehicleGroup addWaypoint [[13272.9,3596.73,357.528], 0];
 _waypoint setWaypointSpeed "FULL";
 
-/*
+
     above only for debug!
 */
 
