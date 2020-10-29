@@ -1,3 +1,32 @@
+ryanzombiesglow = 1;
+ryanzombiesstartinganim = 1;
+
+Ryanzombiescanthrowdemon = 1;
+
+Ryanzombiescanthrow = 1;
+Ryanzombiescanthrowdistance = 20;
+
+Ryanzombiescanthrowtankdistance = 1;
+
+Ryanzombiescanthrowdistancedemon = 150;
+Ryanzombiescanthrowtank = 1;
+
+Ryanzombiesfeed = 1;
+ryanzombiescivilianattacks = true;
+Ryanzombieslogicroam = 1;
+
+
+Ryanzombiesattackspeed = 0.3;
+Ryanzombiesattackdistance = 2.35;
+Ryanzombiesattackstrenth = 1.5;
+Ryanzombiesdamage = 0.15;
+Ryanzombiesdamagecar = 0.01;
+Ryanzombiesdamageair = 0.01;
+Ryanzombiesdamagetank = 0.002;
+Ryanzombiesdamagecarstrenth = 1.5;
+Ryanzombiesdamageairstrenth = 1;
+Ryanzombiesdamagetankstrenth = 0.4;
+
 if (!hasInterface) exitWith {};
 
 ["HS_Spawner", "Civilian Z Group", {
@@ -145,6 +174,48 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+["HS_Spawner", "Single Doc", {
+
+    params ["_position", "_object"];
+
+        ["HS Spawner", [
+            [
+                "COMBO", 
+                ["Pick Speed", ""], [
+                [
+                    "random", "slow","crawler","walker","fast","spider"
+                ], [
+                    ["Random", "Random"],
+                    ["Slow", "Slow"],
+                    ["Crawler", "Crawler"],
+                    ["Walker", "Walker"],
+                    ["Fast", "Fast"],
+                    ["Spider", "Spider"]
+            ], 0], true]
+        ], {
+            params ["_dialogValues", "_args"];
+            _args params ["_position"];
+
+            _dialogValues params ["_speed"];
+
+            // hint str _position;
+            ["HS_SpawnerSpecificCivilian", [_position, _speed, "GRAD_CivilianZed_rds_doctor"]] call CBA_fnc_globalEvent;
+            
+        }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
+
+}] call zen_custom_modules_fnc_register;
+
+
+["HS_Spawner", "Pumpkin Joe Zombie", {
+
+    params ["_position", "_object"];
+
+        [position zombie_bloodpool] call HS_spawner_fnc_spawnLightHouseFeed;
+
+        hintsilent "zombie joe spawned";
+
+}] call zen_custom_modules_fnc_register;
+
 
 ["HS_Spawner", "Demon", {
 
@@ -174,160 +245,6 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
-
-["HS_BluforBuyOptions", "Allow Heli (LVL 1)", {
-    params ["_position", "_object"];
-
-    {[player, 1] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,true];
-    ["wita_notification",["VEHICLES UNLOCKED","BLUFOR now has access to lvl 1 vehicles."]] remoteExec ["bis_fnc_showNotification",west,false];
-    systemChat "level 1 unlocked";
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_BluforBuyOptions", "Allow APC (LVL 2)", {
-    params ["_position", "_object"];
-
-    {[player, 2] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,true];
-    ["wita_notification",["VEHICLES UNLOCKED","BLUFOR now has access to lvl 2 vehicles."]] remoteExec ["bis_fnc_showNotification",west,false];
-    systemChat "level 2 unlocked";
-
-}] call zen_custom_modules_fnc_register;
-
-
-["HS_Tasks_Independent", "Task 1 (Polizeistation)", {
-    params ["_position", "_object"];
-
-    [] remoteExecCall ["HS_spawner_fnc_createTask1",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Tasks_Independent", "Task 2 (Hospital)", {
-    params ["_position", "_object"];
-
-    [] remoteExecCall ["HS_spawner_fnc_createTask2",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Tasks_Independent", "Task 3 (Friedhof)", {
-    params ["_position", "_object"];
-
-    [] remoteExecCall ["HS_spawner_fnc_createTask3",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Tasks_Independent", "Spawn Translation Book", {
-    params ["_position", "_object"];
-
-    [_position] remoteExecCall ["HS_spawner_fnc_spawnTranslationBook",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Tasks_Independent", "Task 4 (Schrottplatz)", {
-    params ["_position", "_object"];
-
-    [] remoteExecCall ["HS_spawner_fnc_createTask4",2];
-
-}] call zen_custom_modules_fnc_register;
-
-
-["HS_Tasks_Independent", "Spawn Nuclear Waste Truck", {
-    params ["_position", "_object"];
-
-    [_position] remoteExecCall ["HS_spawner_fnc_spawnNuclearWasteTruck",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Tasks_Independent", "Task 5 (AKW Müll)", {
-    params ["_position", "_object"];
-
-    [] remoteExecCall ["HS_spawner_fnc_createTask5",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Tasks_Independent", "Spawn Map for Extraction Hint", {
-    params ["_position", "_object"];
-
-    [_position] remoteExecCall ["HS_spawner_fnc_spawnMapPlane",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Tasks_Independent", "Task 6 (Flugzeug)", {
-    params ["_position", "_object"];
-
-    [] remoteExecCall ["HS_spawner_fnc_createTask6",2];
-
-}] call zen_custom_modules_fnc_register;
-
-
-
-["HS_Police", "Equip Police Car with Gasmasks and Beacons", {
-    params ["_position", "_object"];
-
-    if (_object isKindOf "C_Offroad_01_F") then {
-        [_object] remoteExecCall ["HS_spawner_fnc_spawnPoliceCar",2];
-    } else {
-        systemChat "error: execute on Offroad instead";
-    };
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Police", "Spawn Road Block WEST", {
-    params ["_position", "_object"];
-
-    [_position, WEST] remoteExecCall ["HS_spawner_fnc_spawnStreetBlock",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Police", "Spawn Road Block EAST", {
-    params ["_position", "_object"];
-    
-    [_position, EAST] remoteExecCall ["HS_spawner_fnc_spawnStreetBlock",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Ambient", "Equip Unit with Gasmask", {
-    params ["_position", "_object"];
-
-    [_object] remoteExecCall ["HS_spawner_fnc_equipWithGasMask",2];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Ambient", "Play Organ Music", {
-    params ["_position", "_object"];
-
-    private _helper = createVehicle ["Land_ClutterCutter_small_F", _position, [], 0, "NONE"];
-    [_helper] remoteExec ["HS_spawner_fnc_playOrganMusic",0];
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_Ambient", "Spawn Priest", {
-    params ["_position", "_object"];
-
-    [_position] remoteExecCall ["HS_spawner_fnc_spawnPriest",2];
-
-}] call zen_custom_modules_fnc_register;
-
-
-["HS_MissionEnd", "Mission WON Outro", {
-    params ["_position", "_object"];
-
-    [[getMarkerPos "mrk_outro1", getMarkerPos "mrk_outro2", getMarkerPos "mrk_outro3"], "custom\intro\outroServerWin.sqf"] remoteExec ["BIS_fnc_execVM",2];
-    
-}] call zen_custom_modules_fnc_register;
-
-["HS_MissionEnd", "Mission LOST Outro", {
-    params ["_position", "_object"];
-
-    [[], "custom\intro\outroServerLost.sqf"] remoteExec ["BIS_fnc_execVM",2];
-    
-}] call zen_custom_modules_fnc_register;
-
-["HS_MissionEnd", "Mission WIN WIN Outro", {
-    params ["_position", "_object"];
-
-    [[getMarkerPos "mrk_outro1", getMarkerPos "mrk_outro2", getMarkerPos "mrk_outro3"], "custom\intro\outroServerWinWin.sqf"] remoteExec ["BIS_fnc_execVM",2];
-    
-}] call zen_custom_modules_fnc_register;
 
 {
     _x addEventHandler ["CuratorWaypointPlaced", {

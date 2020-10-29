@@ -21,6 +21,3 @@ _unit reveal _targetUnit;
 [_unit, _targetUnit] spawn RZ_fnc_zombie_engageTarget;
 
 _targetUnit setDamage 1;
-createVehicle ["BloodSplatter_01_Large_New_F",_targetUnit, [], 0, "NONE"];
-createVehicle ["BloodSpray_01_New_F",_targetUnit, [], 0, "NONE"];
-createVehicle ["BloodPool_01_Large_New_F",_targetUnit, [], 0, "CAN_COLLIDE"];

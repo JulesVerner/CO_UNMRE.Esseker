@@ -1,6 +1,27 @@
 // dont display for JIP
 if (didJIP) exitWith {
     missionNamespace setVariable ["UNMRE_introDone", true];
+
+    if (!(missionNamespace getVariable ["UNMRE_introDoneServer", false])) then {
+         private _number = player getVariable ["introBoat", 0];
+        private _boatID = format ["introBoat_%1", _number];
+
+        [{
+            params ["_boatID"];
+            !(isNull missionNamespace getVariable [_boatID, objNull])
+        },
+        {
+            params ["_boatID"];
+            private _boat = missionNamespace getVariable [_boatID, objNull];
+
+            player moveInAny _boat;
+            
+        },[_boatID]] call CBA_fnc_waitUntilAndExecute;
+    };
+    
+    sleep 2;
+    cutText ["", "BLACK IN", 20];
+    7 fadeSound 1;
 };
 
 ["CBA_loadingScreenDone", {

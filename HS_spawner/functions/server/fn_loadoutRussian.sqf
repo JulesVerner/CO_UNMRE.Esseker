@@ -1,7 +1,7 @@
 params ["_unit"];
 
 _googles = [
-    "gm_ge_facewear_m65",
+    "NWTS_goggle_deer",
     ""
 ];
 

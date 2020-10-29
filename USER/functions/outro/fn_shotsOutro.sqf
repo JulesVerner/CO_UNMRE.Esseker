@@ -2,14 +2,14 @@ GRAD_introCam_shotDefinitions = [
     ["CAMERA", 10, outroCam_pos_1, missionNamespace getVariable ["outroGuy", objNull], .6, true, true, 5],
     ["CAMERA", 5, outroCam_pos_2, {missionNamespace getVariable ["outroVTOL", objNull]}, .6],
     ["MOVE", 30, outroCam_pos_3, {missionNamespace getVariable ["outroVTOL", objNull]}, .6],
-    ["ATTACHPFH", 30, {missionNamespace getVariable ["outroVTOL", objNull]}, [0,10.5,-3], [0,12.2,-2.8], 1.1]
+    ["ATTACHPFH", 30, {missionNamespace getVariable ["outroVTOL", objNull]}, [0,10.5,-3.3], [0,12.2,-2.6], 1.1]
 ];
 
 /*
 
 */
 
-
+setAperture 3; // fix darkness
 
 [GRAD_introCam_shotDefinitions, true] call GRAD_introCam_fnc_play;
 

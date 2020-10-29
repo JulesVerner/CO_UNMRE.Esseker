@@ -21,6 +21,7 @@ class HS_spawner {
 
         class equipWithGasMask;
 
+        class loadoutCiv;
         class loadoutLDF;
         class loadoutRussian;
 

@@ -7,7 +7,7 @@ _stream setParticleParams [
  "", 
  "BillBoard", 
  1, 
- 4, 
+ 2, 
  [0,0,0], 
     [sin (_dir) * 0.5, cos (_dir) * 0.5, 0], 
  0, 
@@ -28,4 +28,12 @@ _stream setParticleParams [
  [[0.8,0.7,0.2,0]] 
 ]; 
  
-_stream setDropInterval 0.001; 
+_stream setDropInterval 0.01; 
+
+[{
+    params ["_object"];
+    isNull _object  
+},{
+    params ["_object", "_stream"];
+    deleteVehicle _stream;
+}, [_object, _stream]] call CBA_fnc_waitUntilAndExecute;

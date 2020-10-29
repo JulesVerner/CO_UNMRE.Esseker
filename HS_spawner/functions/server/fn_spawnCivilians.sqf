@@ -1,4 +1,4 @@
-params ["_position", ["_type", "random"], ["_radius", 0]];
+params ["_position", ["_type", "random"], ["_radius", 0],["_classname", "none"]];
 
 
 
@@ -36,7 +36,10 @@ private _allTypes = [
 ];
 
 private _uniform = selectRandom _allTypes;
-private _classname = _uniform; // default
+
+if (_classname != "none") then {
+    _uniform = _classname;
+};
 
 switch (_type) do { 
     case "random" : {
@@ -85,6 +88,8 @@ _zombie setVariable ["RZ_aggressiveSoundCount",round (random 5),true];
 
 _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
 // _zombie setVariable ["suomen_smells", true];
+
+[_zombie] call HS_spawner_fnc_loadoutCiv;
 
 [_zombie] joinSilent _grp;
 

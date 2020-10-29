@@ -1,26 +1,25 @@
-private _pond = createSimpleObject ["gm\gm_structures\gm_rivers\gm_pond_01.p3d", [6647.77,3992.72,1.56001], true]; 
+private _pond = "HAG_Pond_Big_01" createVehicleLocal [0,0,0];
+
+// createSimpleObject ["gm\gm_structures\gm_rivers\gm_pond_01.p3d", [6647.77,3992.72,1.56001], true]; 
 _pond setPos [6647.77,3992.72,1.56001];
- 
+
+missionNamespace setVariable ["UNMRE_pond", _pond];
+
 [{ 
-    params ["_pond", "_handle"]; 
+    params ["_args", "_handle"];
+
+    private _pond = missionNamespace getVariable ["UNMRE_pond", objNull];
+    private _height = missionNamespace getVariable ["PVMC_waterLevel", 0];
+
+    if (isNull _pond) exitWith {};
     
-    private _pos = getPos _pond; 
-    if ((_pos select 2) > 30) exitWith { 
+    private _pos = getPos _pond;
+    _pos params ["_posX", "_posY", "_posZ"];
+
+    if (!(missionNamespace getVariable ["PVMC_waterRising", false])) exitWith { 
         [_handle] call CBA_fnc_removePerFrameHandler; 
-    }; 
-
-    private _eyePosHight = 9999;
-    private _pondHightASL = (AGLtoASL _pos) select 2;
-
-    {
-        private _eyePosHightPlayer = ((eyePos _x) select 2) - 0.2;
-
-        if (_eyePosHightPlayer < _eyePosHight) then {
-            _eyePosHight = _eyePosHightPlayer;
-        };
-    }forEach allPlayers;
-    
-    if (_eyePosHight > _pondHightASL) then {
-        _pond setPos (_pos vectorAdd [0,0,0.004])
     };
-}, 0.25, _pond] call CBA_fnc_addPerFrameHandler;
+
+    _pond setPos [_posX, _posY, _height];
+   
+}, 0, []] call CBA_fnc_addPerFrameHandler;

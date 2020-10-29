@@ -8,6 +8,13 @@ if (!isServer) exitWith {};
 }] call CBA_fnc_addEventhandler;
 
 
+["HS_SpawnerSpecificCivilian", {
+    params ["_position", "_speed", "_classname"];
+
+    private _zombie = [_position, _speed, 0, _classname] call HS_spawner_fnc_spawnCivilians;
+
+}] call CBA_fnc_addEventhandler;
+
 
 ["HS_SpawnerRandomRussian", {
     params ["_position", "_speed"];
