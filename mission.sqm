@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2456;
+		nextID=2458;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=750;
+		nextID=772;
 	};
 	class Camera
 	{
-		pos[]={7576.0884,249.52126,3640.5476};
-		dir[]={-0.95901018,-0.27499765,0.068612672};
-		up[]={-0.27430606,0.96143979,0.019625084};
-		aside[]={0.071363747,-2.2005406e-007,0.99746335};
+		pos[]={7603.2124,243.6434,3636.2529};
+		dir[]={0.81949997,-0.52995002,0.21819949};
+		up[]={0.51211476,0.84802252,0.13635565};
+		aside[]={0.25729972,-3.1432137e-007,-0.9663499};
 	};
 };
 binarizationWanted=0;
@@ -518,7 +518,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -13555,7 +13555,7 @@ class Mission
 			};
 			id=1602;
 			type="Land_Pliers_F";
-			atlOffset=1.1231146;
+			atlOffset=1.1231136;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24089,7 +24089,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={9813.6533,15.607856,5587.4121};
-			angle=4.6179132;
+			angle=4.6179128;
 			class Attributes
 			{
 				condition="call{this && (side (thisList # 0) == west)}";
@@ -35769,7 +35769,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7331.2354,227.80873,3690.3511};
-				angles[]={-0,2.1789215,0.0016194459};
+				angles[]={0,2.1789215,0.0016194459};
 			};
 			areaSize[]={40,0,50};
 			flags=1;
