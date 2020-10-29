@@ -1,11 +1,24 @@
 [
 	"GRAD mission events",
-	"Ghost Hawk Crash", 
+	"PVMC Ghost Hawk Crash", 
 	{ 
 	params ["_modulePosition", "_attachedObject"]; 
 	
 	[] remoteExec ["grad_user_fnc_specOpsInsertion", 2, false];
 	hintSilent "spec ops insertion started";
+	}
+] call zen_custom_modules_fnc_register;
+
+
+
+[
+	"GRAD mission events",
+	"PVMC Raise Water", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+	
+	[] remoteExec ["grad_user_fnc_waterMgmt", [-2,0] select isDedicated, false];
+	hintSilent "water rising started";
 	}
 ] call zen_custom_modules_fnc_register;
 
