@@ -31,6 +31,7 @@ class GRAD_USER {
 		class waterFall {};
 		class waterMgmt {};
 		class waterRise {};
+        class waterStart;
 	};
 };
 

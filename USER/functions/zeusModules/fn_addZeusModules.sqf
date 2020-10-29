@@ -17,7 +17,7 @@
 	{ 
 	params ["_modulePosition", "_attachedObject"]; 
 	
-	[] remoteExec ["grad_user_fnc_waterMgmt", [-2,0] select isDedicated, false];
+	[] remoteExec ["grad_user_fnc_waterStart", 2, false];
 	hintSilent "water rising started";
 	}
 ] call zen_custom_modules_fnc_register;

@@ -29,3 +29,11 @@ _stream setParticleParams [
 ]; 
  
 _stream setDropInterval 0.01; 
+
+[{
+    params ["_object"];
+    isNull _object  
+},{
+    params ["_object", "_stream"];
+    deleteVehicle _stream;
+}, [_object, _stream]] call CBA_fnc_waitUntilAndExecute;
