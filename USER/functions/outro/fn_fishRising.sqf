@@ -10,17 +10,21 @@ if (!canSuspend) exitWith {
 
 private _levitateBaseSpeed = 0.1;
 
-ALL_FISHES = [];
+private _identifier = format ["ALL_FISHES_%1", _frequency];
+missionNamespace getVariable [_identifier, []];
 
 DEBUG_DURATION = 60;
 
 if (_frequency > 2) then {
   playSound "outro_song";
+  0 fadesound 1;
 };
 
-[_trigger, _levitateBaseSpeed, _frequency] spawn {
-    params ["_trigger", "_levitateBaseSpeed", "_frequency"];
+[_trigger, _levitateBaseSpeed, _frequency, _identifier] spawn {
+    params ["_trigger", "_levitateBaseSpeed", "_frequency", "_identifier"];
     for "_i" from 0 to (DEBUG_DURATION) do { 
+
+        private _array = missionNamespace getVariable [_identifier, []];
         
         private _position = [[_trigger], []] call BIS_fnc_randomPos;
         _position params ["_posX", "_posY", "_posZ"];
@@ -31,7 +35,8 @@ if (_frequency > 2) then {
         [_agent, -90, 0] call BIS_fnc_setPitchBank;
 
         _agent setVariable ["levitateSpeed", _levitateBaseSpeed + random 0.01];
-        ALL_FISHES pushBackUnique _agent;
+        _array pushBackUnique _agent;
+        missionNamespace setVariable [_identifier, _array];
         sleep random _frequency;
     };
 };
@@ -40,6 +45,9 @@ if (_frequency > 2) then {
 
 private _handle = [{
     params ["_args", "_handle"];
+    _args params ["_identifier"];
+
+    private _array = missionNamespace getVariable [_identifier, []];
 
     {   
         (position _x) params ["_posX", "_posY", "_posZ"];
@@ -61,24 +69,28 @@ private _handle = [{
         [_x, -90, 0] call BIS_fnc_setPitchBank;
 
         if (_posZ > 200) then {
-            ALL_FISHES deleteAt (ALL_FISHES find _x);
+            _array deleteAt (_array find _x);
             deleteVehicle _x;
         };
 
-    } forEach ALL_FISHES;
+    } forEach _array;
+
+    missionNamespace setVariable [_identifier, _array];
     
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+}, 0, [_identifier]] call CBA_fnc_addPerFrameHandler;
 
 [{  
-    params ["_handle"];
+    params ["_handle", "_identifier"];
+
+    private _array = missionNamespace getVariable [_identifier, []];
 
     [_handle] call CBA_fnc_removePerFrameHandler;
     {
         deleteVehicle _x;
-        ALL_FISHES deleteAt (ALL_FISHES find _x);
-    } forEach ALL_FISHES;
+        _array deleteAt (_array find _x);
+    } forEach _array;
 
 
-    ALL_FISHES = [];
+    missionNamespace setVariable [_identifier, []];
 
-}, [_handle], DEBUG_DURATION] call CBA_fnc_waitAndExecute;
+}, [_handle, _identifier], DEBUG_DURATION] call CBA_fnc_waitAndExecute;

@@ -17,9 +17,9 @@ _waypoint setWaypointSpeed "FULL";
 
 private _VTOL = missionNamespace getVariable ["outroVTOL", objNull];
 
-_VTOLhelper = createVehicle ["Land_VitaminBottle_F", [0,0,0], [], 0, "CAN_COLLIDE"];
-_VTOLhelper attachTo [_VTOL, [0.0307617,11.2158,-2.82889]];
-
+// _VTOLhelper = createVehicle ["Land_VitaminBottle_F", [0,0,0], [], 0, "CAN_COLLIDE"];
+// _VTOLhelper attachTo [_VTOL, [0,14.2,-2.8]];
+// _VTOLhelper hideObjectGlobal false;
 
 private _outroChair = createVehicle ["Land_CampingChair_V1_F", [10611.6,5275.24,0], [], 0, "CAN_COLLIDE"];
 
@@ -28,7 +28,7 @@ private _outroGuy = (createGroup civilian) createUnit ["RDS_Villager2", [10611.6
 [_outroChair, _outroGuy] call acex_sitting_fnc_sit;
 
 missionNamespace setVariable ["outroGuy", _outroGuy, true];
-missionNamespace setVariable ["outroVTOLhelper", _VTOLhelper, true];
+// missionNamespace setVariable ["outroVTOLhelper", _VTOLhelper, true];
 
 [{
 

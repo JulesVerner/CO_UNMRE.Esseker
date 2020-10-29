@@ -106,7 +106,7 @@ private _handle = [{
         ALL_TREES deleteAt (ALL_TREES find _x);
     } forEach ALL_TREES;
 
-    hint "safe to retry";
+    // hint "safe to retry";
 
     {
         _x hideObject false;

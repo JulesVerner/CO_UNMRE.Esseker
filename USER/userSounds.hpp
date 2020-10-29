@@ -89,3 +89,10 @@ class falls
 	sound[] = { "USER\sounds\falls.ogg", 1, 1 };
 	titles[] = {};
 };
+
+class crash
+{
+	name = "crash";
+	sound[] = { "USER\sounds\crash.ogg", 10, 1 };
+	titles[] = {};
+};
