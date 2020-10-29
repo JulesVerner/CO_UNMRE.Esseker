@@ -4,12 +4,12 @@
 		_this call GRAD_user_fnc_waterfall;
 	}, _array, _time] call CBA_fnc_waitAndExecute;
 }forEach [
-    [[water_01, 180], 0],
-    [[water_03, 180], 10],
-    [[water_05, 180], 20],
-	[[water_07, 180], 0],
-    [[water_09, 180], 10],
-    [[water_11, 180], 20],
+    [[water_01, 0], 0],
+    [[water_03, 0], 10],
+    [[water_05, 0], 20],
+	[[water_07, 0], 0],
+    [[water_09, 0], 10],
+    [[water_11, 0], 20],
     [[water_13, 180], 0],
     [[water_15, 180], 10],
     [[water_17, 180], 20],

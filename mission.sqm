@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2464;
+		nextID=2494;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=772;
+		nextID=794;
 	};
 	class Camera
 	{
-		pos[]={10610.003,6.9892645,5280.2134};
-		dir[]={0.24970281,-0.38544515,-0.88831151};
-		up[]={0.10430653,0.92272758,-0.37106714};
-		aside[]={-0.96269339,-8.7311491e-008,-0.27061257};
+		pos[]={10401.042,56.032364,5439.021};
+		dir[]={0.31416935,-0.86777711,0.3850638};
+		up[]={0.54858559,0.49695373,0.6723789};
+		aside[]={0.77483386,-1.4332181e-007,-0.63217735};
 	};
 };
 binarizationWanted=0;
@@ -9580,12 +9580,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11340.38,154.13429,651.59998};
+						position[]={10433.829,1.6977578,5473.5229};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 1];}";
 						description="Platoon Lead @Gamma";
 						isPlayer=1;
 						isPlayable=1;
@@ -9659,17 +9660,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11341.507,154.19958,650.521};
+						position[]={10434.956,1.6998265,5472.4438};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 1];}";
 						description="Platoon Assistant";
 						isPlayable=1;
 					};
 					id=1531;
 					type="B_Soldier_SL_F";
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9731,12 +9734,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11334.376,154.08188,650.638};
+						position[]={10427.825,2.5555403,5472.561};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 2];}";
 						description="Squad Leader @Alpha";
 						isPlayable=1;
 					};
@@ -9790,12 +9794,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11335.969,154.17712,649.16998};
+						position[]={10429.418,2.4294693,5471.0928};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 3];}";
 						description="Squad Assistant";
 						isPlayable=1;
 					};
@@ -9862,13 +9867,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11329.611,154.29704,645.54901};
+						position[]={10423.061,3.2988675,5467.4722};
 						angles[]={0,0.066601761,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 2];}";
 						description="Team Leader @Alpha 1";
 						isPlayable=1;
 					};
@@ -9922,18 +9928,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11328.233,154.35132,644.43701};
+						position[]={10421.683,3.4215834,5466.3599};
 						angles[]={0,0.48844784,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 2];}";
 						description="MG";
 						isPlayable=1;
 					};
 					id=1537;
 					type="B_soldier_AR_F";
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9982,13 +9990,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11330.275,154.4174,643.42096};
+						position[]={10423.725,3.3138318,5465.3438};
 						angles[]={0,0.53703779,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 2];}";
 						description="Assistant MG";
 						isPlayable=1;
 					};
@@ -10042,13 +10051,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11328.583,154.4502,642.67096};
+						position[]={10422.032,3.4573371,5464.5938};
 						angles[]={0,0.36442474,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 2];}";
 						description="Rifleman";
 						isPlayable=1;
 					};
@@ -10115,13 +10125,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11337.061,154.47409,643.32397};
+						position[]={10428.419,2.8951259,5465.8379};
 						angles[]={0,0.29702014,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 3];}";
 						description="Team Leader @Alpha 2";
 						isPlayable=1;
 					};
@@ -10175,18 +10186,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11335.342,154.49557,642.599};
+						position[]={10426.701,3.0878863,5465.1128};
 						angles[]={0,0.47041857,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 3];}";
 						description="Marksman";
 						isPlayable=1;
 					};
 					id=1542;
 					type="B_soldier_M_F";
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10235,19 +10248,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11337.594,154.56708,641.612};
+						position[]={10428.953,2.9475479,5464.126};
 						angles[]={0,0.41217694,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 3];}";
 						description="AT";
 						isPlayable=1;
 					};
 					id=1543;
 					type="B_soldier_LAT_F";
-					atlOffset=-1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10296,19 +10309,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11335.799,154.59222,640.65399};
+						position[]={10427.159,3.1620367,5463.168};
 						angles[]={0,0.57564443,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 3];}";
 						description="Rifleman";
 						isPlayable=1;
 					};
 					id=1544;
 					type="B_Soldier_F";
-					atlOffset=-1.5258789e-005;
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10370,12 +10384,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11343.332,154.42133,646.10577};
+						position[]={10436.781,1.8163552,5468.0288};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 4];}";
 						description="Squad Leader @Bravo";
 						isPlayable=1;
 					};
@@ -10429,17 +10444,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11344.925,154.50105,644.63806};
+						position[]={10438.374,1.7930045,5466.561};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 4];}";
 						description="Squad Assistant";
 						isPlayable=1;
 					};
 					id=1547;
 					type="B_Soldier_SL_F";
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10501,13 +10518,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11341.892,154.61359,641.41663};
-						angles[]={0,0.34822038,0};
+						position[]={10435.341,2.2431262,5463.3398};
+						angles[]={0,0.3482281,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 4];}";
 						description="Team Leader @Bravo 1";
 						isPlayable=1;
 					};
@@ -10561,8 +10579,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11340.514,154.65253,640.30493};
-						angles[]={0,0.48844784,0};
+						position[]={10433.963,2.5032811,5462.228};
+						angles[]={0,0.48844782,0};
 					};
 					side="West";
 					flags=5;
@@ -10621,8 +10639,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11342.556,154.70847,639.28888};
-						angles[]={0,0.53703779,0};
+						position[]={10436.005,2.3538413,5461.2119};
+						angles[]={0,0.53703773,0};
 					};
 					side="West";
 					flags=5;
@@ -10681,13 +10699,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11340.863,154.73375,638.53888};
+						position[]={10434.313,2.618396,5460.4619};
 						angles[]={0,0.36442474,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 4];}";
 						description="Rifleman";
 						isPlayable=1;
 					};
@@ -10754,7 +10773,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11347.818,154.74126,639.17401};
+						position[]={10441.268,1.8889353,5461.0972};
 						angles[]={0,0.31982136,0};
 					};
 					side="West";
@@ -10766,6 +10785,7 @@ class Mission
 					};
 					id=1554;
 					type="B_Soldier_TL_F";
+					atlOffset=1.1920929e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10814,8 +10834,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11346.084,154.76982,638.48865};
-						angles[]={0,0.49321979,0};
+						position[]={10439.533,2.0117974,5460.4116};
+						angles[]={0,0.49321976,0};
 					};
 					side="West";
 					flags=5;
@@ -10826,6 +10846,7 @@ class Mission
 					};
 					id=1555;
 					type="B_soldier_M_F";
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10874,8 +10895,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11348.313,154.81308,637.45056};
-						angles[]={0,0.43497816,0};
+						position[]={10441.763,2.0073347,5459.3735};
+						angles[]={0,0.43497813,0};
 					};
 					side="West";
 					flags=5;
@@ -10926,7 +10947,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="gm_face_whiteHead_02";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -10934,7 +10974,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11346.496,154.85127,636.53375};
+						position[]={10439.945,2.1824992,5458.4565};
 						angles[]={0,0.59844565,0};
 					};
 					side="West";
@@ -10946,6 +10986,7 @@ class Mission
 					};
 					id=1557;
 					type="B_Soldier_F";
+					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10994,6 +11035,7 @@ class Mission
 			{
 			};
 			id=1553;
+			atlOffset=1.1920929e-007;
 		};
 		class Item18
 		{
@@ -11007,13 +11049,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11336.929,154.9059,634.35101};
+						position[]={10430.378,3.3156228,5456.2739};
 						angles[]={0,0.32204816,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 1];}";
 						description="Medic @Juliett";
 						isPlayable=1;
 					};
@@ -11067,54 +11110,183 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11335.161,154.94945,633.43811};
-						angles[]={0,0.35272983,0};
+						position[]={10428.61,3.4747386,5455.3608};
+						angles[]={0,0.35273102,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 1];}";
 						description="Medic";
 						isPlayable=1;
 					};
 					id=1560;
 					type="B_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11337.391,154.99461,632.64099};
-						angles[]={0,0.4441188,0};
+						position[]={10430.839,3.3743508,5454.564};
+						angles[]={0,0.44411647,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 1];}";
 						description="Medic";
 						isPlayable=1;
 					};
 					id=1561;
 					type="B_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11335.746,155.05399,631.5932};
-						angles[]={0,0.50358367,0};
+						position[]={10429.195,3.5442843,5453.5161};
+						angles[]={0,0.50357985,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 1];}";
 						description="Medic";
 						isPlayable=1;
 					};
 					id=1562;
 					type="B_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes

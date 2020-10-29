@@ -35,18 +35,6 @@ GRAD_introCam_shotDefinitions = [
     ["CAMERA", 15, intro_camPos_5, ace_player, .6, true, true, 1]
 ];
 
-["CBA_loadingScreenDone", {
-    [] spawn {
-        
-        if (!didJIP) then {
-
-            [] spawn GRAD_introFX_fnc_textEffects;
-        } else {
-
-        };
-    };
-}] call CBA_fnc_addEventHandler;
-
 
 if (!isServer) exitWith {};
 
@@ -54,7 +42,7 @@ private _soundSource = createSoundSource ["waterSplashSource", position intro_ca
 
 private _allGroupsWithPlayers = [];
 {
-    if (side _x == west) then {
+    if (side _x == west && !isMultiplayer) then {
         _allGroupsWithPlayers pushBackUnique group _x
     };
 } forEach allPlayers;
@@ -93,6 +81,9 @@ for "_i" from 1 to 4 do {
     _boat setVariable ["introCamHeli", _heli, true];
     _boat allowDamage false;
 
+    private _boatID = format ["introBoat_%1", _i];
+    missionNamespace setVariable [_boatID, _boat, true];
+
     [{
         params ["_heli"];
         (isNull (getSlingLoad _heli))
@@ -106,10 +97,12 @@ for "_i" from 1 to 4 do {
     {
         private _groupUnits = units _x;
         {
-            if (_boat emptyPositions "cargo" > 0 && !(_x getVariable ["playerPlacedInBoat", false])) then {
-                _x moveInAny _boat;
-                _x allowDamage false;
-                _x setVariable ["playerPlacedInBoat", true];
+            if (!(_x getVariable ["playerPlacedInBoat", false])) then {
+                if (_x getVariable ["introBoat", 0] == _i) then {
+                    _x moveInAny _boat;
+                    _x allowDamage false;
+                    _x setVariable ["playerPlacedInBoat", true];
+                };
             };
         } forEach _groupUnits;
     } forEach _allGroupsWithPlayers;
@@ -117,27 +110,7 @@ for "_i" from 1 to 4 do {
     private _flightPath = format ["fn_flightPath%1.sqf", _i];
 
     [_heli, _boat] execVM ("user\functions\intro\functions\records\" + _flightPath);
-    /*
-    for "_j" from 1 to 6 do {
-        private _marker = format ["mrk_intro_heli_wp_%1_%2", _i, _j];
-      
-        private _position =  getMarkerPos _marker;
-        _position set [2,20];
-
-         // terrain height
-        private _wp = _group addWaypoint [_position, -1]; // negative to make ASL
-        _wp setWaypointType "MOVE";
-
-        diag_log format ["adding waypoint at %1", _position];
-
-        if (_j == 4) then {
-            _position set [2,10];
-            _wp setWaypointType "LOAD";
-            _wp setWaypointStatements ["true", "[vehicle this] execVM 'user\functions\intro\functions\client\fn_heliland.sqf';"];
-            _wp setWPPos _position;
-        };
-    };
-    */
+   
 };
 
 
@@ -145,15 +118,7 @@ for "_i" from 1 to 4 do {
         params ["_soundSource"];
 
         deleteVehicle _soundSource;
+
+        missionNamespace setVariable ["UNMRE_introDoneServer", true, true];
+
 }, [_soundSource], 180] call CBA_fnc_waitAndExecute;
-
-/*
-
-private _camDefinitions = [
-    ["FREE", getPos intro_camPos_0, getPos intro_camPos_1, intro_camTarget_0, intro_camTarget_1, 1, 0, 0.6, 0.6, [0,0,0], [0,0,0]],
-    ["FREE", getPos intro_camPos_1, getPos intro_camPos_2, intro_camTarget_1, intro_camTarget_2, 25, 0, 0.6, 0.4, [0,0,0], [0,0,0]],
-    ["FREE", getPos intro_camPos_2, getPos intro_camPos_2, intro_camTarget_2, intro_camTarget_3, 15, 0, 0.4, 0.4, [0,0,0], [0,0,0]],
-    ["FREE", getPos intro_camPos_2, getPos intro_camPos_3, intro_camTarget_3, {vehicle player getVariable ["introCamHeli", objNull]}, 15, 0, 0.4, 0.1, [0,0,0], [0,0,5]],
-    ["FREE", getPos intro_camPos_3, getPos vehicle player, {vehicle player getVariable ["introCamHeli", objNull]}, {vehicle player getVariable ["introCamHeli", objNull]}, 5, 0, 0.1, 0.2, [0,0,5], [0,0,1]]
-];
-*/

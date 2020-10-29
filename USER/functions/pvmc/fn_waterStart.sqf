@@ -15,7 +15,7 @@ private _soundSource = createSoundSource ["waterSplashSource", getPos water_01, 
     // get lowest player
     {
         if (side _x == west) then {
-            private _eyePosHeightPlayer = ((eyePos _x) select 2) - 0.2;
+            private _eyePosHeightPlayer = ((eyePos _x) select 2) - 0.3;
 
             if (_eyePosHeightPlayer < _eyePosHeightMin) then {
                 _eyePosHeightMin = _eyePosHeightPlayer;
@@ -25,8 +25,8 @@ private _soundSource = createSoundSource ["waterSplashSource", getPos water_01, 
 
     private _height = missionNamespace getVariable ["PVMC_waterLevel", 1.5];
 
-    if (_height < _eyePosHeightMin) then {
-        _height = _height + 0.0001;
+    if (AGLtoASL _height < _eyePosHeightMin) then {
+        _height = _height + 0.0005;
     };
     missionNamespace setVariable ["PVMC_waterLevel", _height, true];
 
@@ -34,6 +34,6 @@ private _soundSource = createSoundSource ["waterSplashSource", getPos water_01, 
         [_handle] call CBA_fnc_removePerFrameHandler;
         missionNamespace setVariable ["PVMC_waterRising", false, true];
         deleteVehicle _soundSource;
-    };    
+    };
 
 }, 0, [_soundSource]] call CBA_fnc_addPerFrameHandler;

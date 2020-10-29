@@ -1,4 +1,6 @@
-private _pond = createSimpleObject ["gm\gm_structures\gm_rivers\gm_pond_01.p3d", [6647.77,3992.72,1.56001], true]; 
+private _pond = "HAG_Pond_Big_01" createVehicleLocal [0,0,0];
+
+// createSimpleObject ["gm\gm_structures\gm_rivers\gm_pond_01.p3d", [6647.77,3992.72,1.56001], true]; 
 _pond setPos [6647.77,3992.72,1.56001];
 
 missionNamespace setVariable ["UNMRE_pond", _pond];
@@ -17,7 +19,7 @@ missionNamespace setVariable ["UNMRE_pond", _pond];
     if (!(missionNamespace getVariable ["PVMC_waterRising", false])) exitWith { 
         [_handle] call CBA_fnc_removePerFrameHandler; 
     };
-    
+
     _pond setPos [_posX, _posY, _height];
    
 }, 0, []] call CBA_fnc_addPerFrameHandler;
