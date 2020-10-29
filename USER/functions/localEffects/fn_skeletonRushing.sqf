@@ -2,6 +2,7 @@ params [["_minDist", 15], ["_maxDist", 20]];
 
 if !(canSuspend) exitWith { _this spawn grad_user_fnc_skeletonRushing; };
 
+
 [player, "skeletonRushing"] call grad_user_fnc_setVariable;
 
 private _spawnPos = [];
@@ -24,29 +25,82 @@ while { !_suitablePositionFound } do {
 showHud false;
 diwako_dui_main_toggled_off = true;
 private _foglevel = fog;
-0 setFog 0.7;
+// 0 setFog 0.7;
 
 private _skeleton = "impaled_skeleton" createVehicleLocal _spawnPos;
 _skeleton setDir (player getDir _skeleton);
 
-// private _skeletonPos = getPosASL _skeleton;
-// private _lightsource = "#lightpoint" createVehicleLocal (getPosATL _skeleton);
-// _lightsource setPosASL [_skeletonPos#0, _skeletonPos#1, 1.9];
-// _lightsource setLightColor [1,0.15,0];
-// _lightsource setLightBrightness 1;
+private _skeletonPos = getPosASL _skeleton;
+private _lightsource = "#lightpoint" createVehicleLocal (getPosATL _skeleton);
+_lightsource setPosASL [_skeletonPos#0, _skeletonPos#1, (_skeletonPos#2) + 1.9];
+_lightsource setLightColor [1,0.5,0];
+_lightsource setLightBrightness 0.5;
 // _lightsource attachTo [_skeleton];
 
 // private _fire = "test_EmptyObjectForFireBig" createVehicleLocal (getPos _skeleton);
 // _fire attachTo [_skeleton];
 
 private _ps1 = "#particlesource" createVehicleLocal (getPosATL _skeleton);
-_ps1 setParticleParams [
-	["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard",
-	1, 1, [0, 0, 0], [0, 0, 0.5], 0, 1, 1, 3, [0.5,1.5],
-	[[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]],
-	[0.25,1], 1, 1, "", "", _this];
-_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0];
-_ps1 setDropInterval 0.001;
+_ps1 setParticleCircle [0, [0, 0, 0]]; 
+_ps1 setParticleRandom [0.2, [ 1, 1, 0], [2, 2, 1], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
+_ps1 setDropInterval 0.05; 
+_ps1 setParticleParams [ 
+	["\ca\data\ParticleEffects\FireAndSmokeAnim\FireAnim", 8, 2, 7],  
+	"",  
+	"Billboard",  
+	1,  
+	1,  
+	[random 0.5, random 0.5, 0],  
+	[0, 0, 2],  
+	1,  
+	1,  
+	0.9,  
+	0.3,  
+	[4,6], 
+	[[1,1,1,0.7], [1,1,1,0.5],  
+	[1,1,1,0]],  
+	[0,1],  
+	1,  
+	1,  
+	"",  
+	"",  
+	_this 
+];
+
+private _ps2 = "#particlesource" createVehicleLocal (getPosATL _skeleton);
+_ps2 setParticleCircle [0, [0, 0, 0]]; 
+_ps2 setParticleRandom [0.5, [1, 1, 0.4], [0, 0, 4], 0, 0.5, [0, 0, 0, 0], 0, 0]; 
+_ps2 setDropInterval 0.01; 
+_ps2 setParticleParams [ 
+	["\ca\data\ParticleEffects\FireAndSmokeAnim\FireAnim", 8, 2, 1],  
+	"",  
+	"Billboard",  
+	1,  
+	2,  
+	[0, random 0.5,  random 1],  
+	[0, 0, 1],  
+	10, 1,  
+	0.9,  
+	0.3,  
+	[1], 
+	[[1,1,1,0.5], 
+	[1,1,1,0.2], 
+	[1,1,1,0]],  
+	[0.5,0.5,0],  
+	1,  
+	1,  
+	"",  
+	"",  
+	_this 
+]; 
+
+// _ps1 setParticleParams [
+// 	["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard",
+// 	1, 1, [0, 0, 0], [0, 0, 0.5], 0, 1, 1, 3, [0.5,1.5],
+// 	[[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]],
+// 	[0.25,1], 1, 1, "", "", _this];
+// _ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0];
+// _ps1 setDropInterval 0.001;
 
 // Smoke
 // private _ps2 = "#particlesource" createVehicleLocal (getPosATL _skeleton);
@@ -72,22 +126,26 @@ private _distance = 0;
 [
 	{
 		params ["_args", "_handle"];
-		_args params ["_skeleton", "_distance", "_foglevel", "_ps1"];
+		_args params ["_skeleton", "_distance", "_foglevel", "_ps1", "_ps2", "_lightsource"];
 		if ((player distance2D _skeleton) > 1) then {
 			_distance = _distance + 0.4;
 			// createVehicle ["Sign_Sphere10cm_F", _skeleton getPos [_distance, _skeleton getDir player], [], 0, "CAN_COLLIDE"];
 			private _pos = AGLToASL (_skeleton getPos [_distance, _skeleton getDir player]);
 			// _skeleton setPosASL [_pos#0, _pos#1, getTerrainHeightASL _pos];
 			_skeleton setPosASL _pos;
-			_ps1 setPosASL [_pos#0, _pos#1, 1];
+			_ps1 setPosASL [_pos#0, _pos#1, (_pos#2) + 1];
+			_ps2 setPosASL [_pos#0, _pos#1, (_pos#2) + 1];
+			_lightsource setPosASL [_pos#0, _pos#1, (_pos#2) + 1.9];
 			_skeleton setDir (player getDir _skeleton);
 		} else {
 			[_handle] call cba_fnc_removeperframehandler;
 			deleteVehicle _ps1;
+			deleteVehicle _ps2;
+			deleteVehicle _lightsource;
 			deleteVehicle _skeleton;
 			0 setFog _foglevel;
 			showHud true;
 			diwako_dui_main_toggled_off = false;			
 		};
-	}, 0, [_skeleton, _distance, _foglevel, _ps1]
+	}, 0, [_skeleton, _distance, _foglevel, _ps1, _ps2, _lightsource]
 ] call CBA_fnc_addPerFrameHandler;
