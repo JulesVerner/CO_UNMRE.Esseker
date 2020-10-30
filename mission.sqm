@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=882;
+		nextID=904;
 	};
 	class Camera
 	{
@@ -567,7 +567,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=107;
+									items=108;
 									class Item0
 									{
 										class data
@@ -2066,6 +2066,20 @@ class CustomAttributes
 											value="ace_medical_gui_maxdistance";
 										};
 									};
+									class Item107
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="acex_volume_shownotification";
+										};
+									};
 								};
 							};
 						};
@@ -2082,7 +2096,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=107;
+									items=108;
 									class Item0
 									{
 										class data
@@ -6898,6 +6912,51 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item107
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -9594,7 +9653,7 @@ class Mission
 					};
 					id=1530;
 					type="B_Soldier_SL_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9723,7 +9782,7 @@ class Mission
 			{
 			};
 			id=1529;
-			atlOffset=7.6293945e-006;
+			atlOffset=1.5258789e-005;
 		};
 		class Item12
 		{
@@ -10005,6 +10064,7 @@ class Mission
 					};
 					id=1538;
 					type="B_soldier_AAR_F";
+					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10066,6 +10126,7 @@ class Mission
 					};
 					id=1539;
 					type="B_Soldier_F";
+					atlOffset=-7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10262,6 +10323,7 @@ class Mission
 					};
 					id=1543;
 					type="B_soldier_LAT_F";
+					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10323,7 +10385,6 @@ class Mission
 					};
 					id=1544;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10397,7 +10458,6 @@ class Mission
 					};
 					id=1546;
 					type="B_Soldier_SL_F";
-					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10506,7 +10566,6 @@ class Mission
 			{
 			};
 			id=1545;
-			atlOffset=7.6293945e-006;
 		};
 		class Item16
 		{
@@ -10594,7 +10653,6 @@ class Mission
 					};
 					id=1550;
 					type="B_soldier_AR_F";
-					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10717,7 +10775,7 @@ class Mission
 					};
 					id=1552;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-005;
+					atlOffset=8.392334e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11249,7 +11307,7 @@ class Mission
 					};
 					id=1562;
 					type="B_medic_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0

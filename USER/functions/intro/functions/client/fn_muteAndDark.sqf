@@ -28,7 +28,7 @@ private _soundBugFix = ["vehicle", {
 
 
 [{
-    (missionNamespace getVariable ["UNMRE_introDone", false])
+    (missionNamespace getVariable ["UNMRE_introStarted", false])
 },{
     params ["_soundBugFix"];
     
