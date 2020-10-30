@@ -25,6 +25,29 @@
 
 
 [
+	"GRAD mission events",
+	"Call Exfil Blackfish to Land", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+	
+	[] remoteExec ["grad_user_fnc_startExfil", 2, false];
+	hintSilent "Exfil started";
+	}
+] call zen_custom_modules_fnc_register;
+
+[
+	"GRAD mission events",
+	"End Mission Outro (Blackfish Start from Airfield)", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+	
+	[] remoteExec ["grad_user_fnc_serverOutro", 2, false];
+	hintSilent "Outro started";
+	}
+] call zen_custom_modules_fnc_register;
+
+
+[
 	"GRAD local effects",
 	"Rushing Skeleton", 
 	{ 
