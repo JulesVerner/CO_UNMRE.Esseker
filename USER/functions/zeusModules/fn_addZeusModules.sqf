@@ -41,7 +41,7 @@
 	{ 
 	params ["_modulePosition", "_attachedObject"]; 
 	
-	[] remoteExec ["grad_user_fnc_serverOutro", 2, false];
+	[] remoteExec ["grad_outro_fnc_serverOutro", 2, false];
 	hintSilent "Outro started";
 	}
 ] call zen_custom_modules_fnc_register;

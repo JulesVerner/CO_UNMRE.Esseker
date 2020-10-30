@@ -7,8 +7,7 @@ missionNamespace setVariable ["outroVTOL", _vehicle, true];
 
 private _vehicleGroup = createVehicleCrew _vehicle;
 _vehicleGroup setBehaviour "CARELESS";
-private _waypoint = _vehicleGroup addWaypoint [[13272.9,3596.73,357.528], 0];
-_waypoint setWaypointSpeed "FULL";
+
 
 
     above only for debug!
@@ -17,6 +16,10 @@ _waypoint setWaypointSpeed "FULL";
 (selectRandom allPlayers) action ["fireInFlame", outro_campfire];
 
 private _VTOL = missionNamespace getVariable ["outroVTOL", objNull];
+
+private _waypoint = (group _VTOL) addWaypoint [[13272.9,3596.73,357.528], 0];
+_waypoint setWaypointSpeed "FULL";
+_VTOL action ["lightOn", _VTOL];
 
 // _VTOLhelper = createVehicle ["Land_VitaminBottle_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 // _VTOLhelper attachTo [_VTOL, [0,14.2,-2.8]];

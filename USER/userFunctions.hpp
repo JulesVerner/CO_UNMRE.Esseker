@@ -51,6 +51,20 @@ class GRAD_introFX {
     };
 };
 
+class grad_outro {
+    tag = "grad_outro";
+
+    class outro {
+        file = "USER\functions\outro";
+        class fishRising;
+        class playEffects;
+        class serverOutro;
+        
+        class shotsOutro {};
+        class treeRising;
+    };
+};
+
 class GRAD_zeusModules {
 	tag = "grad_zeus";
 
