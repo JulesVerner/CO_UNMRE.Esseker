@@ -26,13 +26,13 @@ GRAD_introCam_allowForJIP = false;
 GRAD_introCam_shotDefinitions = [
     ["CAMERA", 0, intro_camPos_0, intro_camTarget_0, .6, true, false],
     ["MOVE", 0, intro_camPos_0, intro_camTarget_1, .6],
-    ["MOVE", 8, intro_camPos_1, intro_camTarget_1, .6],
-    ["MOVE", 20, intro_camPos_2, intro_camTarget_2, .4],
+    ["MOVE", 12, intro_camPos_1, intro_camTarget_1, .6],
+    ["MOVE", 15, intro_camPos_2, intro_camTarget_2, .4],
     ["MOVE", 15, intro_camPos_2, intro_camTarget_3, .4],
-    ["MOVE", 5, intro_camPos_3, {objectParent player}, .1],
+    ["MOVE", 5, intro_camPos_3, {objectParent player}, .075],
     ["BLEND", 5, ["DYNAMIC", "<t color='#ffffff' size = '1'>UN-Friedenstruppen auf dem Weg ins Einsatzgebiet</t>",-1,safeZoneY-safeZoneY/2,6,1,0], -1, -1],
     ["ROTATE", 15, {objectParent player}, 0, 10, 90, 270, 0.6, true],
-    ["CAMERA", 15, intro_camPos_5, {objectParent player}, .6, true, true, 1]
+    ["CAMERA", 22, intro_camPos_5, {objectParent player}, .6, true, true, 1]
 ];
 
 
@@ -117,4 +117,4 @@ if (!isServer) exitWith {};
 
         }, [_soundSource], 180] call CBA_fnc_waitAndExecute;
 
-}, [], 10] call CBA_fnc_waitAndExecute;
+}, [], 25] call CBA_fnc_waitAndExecute;

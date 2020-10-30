@@ -32,9 +32,9 @@ private _boatID = format ["introBoat_%1", _number];
     }, 1, [_boat]] call CBA_fnc_addPerFrameHandler;
 
     [] spawn {
-        sleep 3;
+        sleep 1;
         cutText ["", "BLACK IN", 20];
-        sleep 7;
+        sleep 3;
         1 fadeSound 1;
         sleep 1;
         playSound "intro_song";
