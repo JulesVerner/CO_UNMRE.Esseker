@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2497;
+		nextID=2500;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=794;
+		nextID=816;
 	};
 	class Camera
 	{
-		pos[]={10586.44,79.79142,5171.8486};
-		dir[]={-0.10257126,-0.93345505,-0.34382746};
-		up[]={-0.2668446,0.35874325,-0.8944816};
-		aside[]={-0.95830226,9.8133751e-007,0.28588352};
+		pos[]={6655.0205,210.94157,4004.6824};
+		dir[]={-0.042755041,-0.12875345,0.9907853};
+		up[]={-0.005552941,0.99167341,0.12865794};
+		aside[]={0.99910402,-4.4492481e-009,0.043114457};
 	};
 };
 binarizationWanted=0;
@@ -6971,7 +6971,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=615;
+		items=616;
 		class Item0
 		{
 			dataType="Layer";
@@ -10730,7 +10730,7 @@ class Mission
 					};
 					id=1552;
 					type="B_Soldier_F";
-					atlOffset=-4.529953e-006;
+					atlOffset=8.1062317e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13753,7 +13753,7 @@ class Mission
 			};
 			id=1602;
 			type="Land_Pliers_F";
-			atlOffset=1.1231146;
+			atlOffset=1.1231136;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -37176,6 +37176,20 @@ class Mission
 			id=2495;
 			type="Land_Camping_Light_F";
 			atlOffset=3.2782555e-006;
+		};
+		class Item615
+		{
+			dataType="Trigger";
+			position[]={6644.1948,207.45741,3993.3669};
+			angle=4.7197895;
+			class Attributes
+			{
+				name="trg_bunkerArea";
+				sizeB=30;
+				isRectangle=1;
+			};
+			id=2497;
+			type="EmptyDetectorAreaR50";
 		};
 	};
 	class Connections

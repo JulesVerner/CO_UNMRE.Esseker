@@ -27,6 +27,7 @@ class GRAD_USER {
 	class PVMC {
 		file = "USER\functions\pvmc";
 		class cameras {};
+        class radioDistortion { postInit = 1; };
         class specOpsInsertion;
 		class waterFall {};
 		class waterMgmt {};
