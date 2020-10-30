@@ -14,9 +14,6 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
     []
 ] call CBA_fnc_waitUntilAndExecute;
 
-
-
-
 // Bleed-Out prevention
 #include "\z\ace\addons\medical\functions\script_component.hpp"
 //10% of the default Blood Volume as failsafe
