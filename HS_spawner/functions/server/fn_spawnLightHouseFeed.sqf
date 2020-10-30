@@ -1,10 +1,14 @@
 params ["_pos"];
 
+_pos params ["", "", "_zPos"];
+
+_pos set [2, _zPos + 1];
+
 if (missionNamespace getVariable ["lightHouseFeed", false]) exitWith {};
 missionNamespace setVariable ["lightHouseFeed", true, true];
 
 private _grpUnit = createGroup independent;
-_unit = _grpUnit createUnit ["GRAD_CivilianZed_rds_uniform_citizen2_walker", _pos, [], 0, "NONE"];
+_unit = _grpUnit createUnit ["GRAD_CivilianZed_rds_uniform_citizen2_walker", _pos, [], 0, "CAN_COLLIDE"];
 _grpUnit setVariable ["ace_map_hideBlueForceMarker", true, true];
 _unit setVariable ["suomen_overwriteRZ", true];
 _unit setVariable ["RZ_isDemon", false];
