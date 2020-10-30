@@ -97,19 +97,22 @@ private _handle = [{
     
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 
+
 [{  
     params ["_handle"];
 
     [_handle] call CBA_fnc_removePerFrameHandler;
     {
-        deleteVehicle _x;
-        ALL_TREES deleteAt (ALL_TREES find _x);
+        // deleteVehicle _x;
+        // ALL_TREES deleteAt (ALL_TREES find _x);
+
+        _x setVariable ["levitateSpeed", 0];
     } forEach ALL_TREES;
 
     // hint "safe to retry";
 
     {
-        _x hideObject false;
+        // _x hideObject false;
     } forEach HIDDEN_TREES;
     
 }, [_handle], DEBUG_DURATION] call CBA_fnc_waitAndExecute;

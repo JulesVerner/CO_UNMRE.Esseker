@@ -40,6 +40,10 @@ class GRAD_introFX {
 
     class intro {
         file = "USER\functions\intro\functions\client";
+        class chairCircle;
+        class createChairCircle;
+        class selectChair;
+        
         class waterFX {};
         class textEffects;
         class muteAndDark { postInit = 1;};
