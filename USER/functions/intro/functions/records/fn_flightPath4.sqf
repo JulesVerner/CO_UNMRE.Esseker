@@ -18,7 +18,7 @@ params ["_heli", "_boat"];
     [{
         params ["_heli", "_boat"];
 
-        _heli setVariable ["boatDropped", true];
+        _heli setVariable ["boatDropped", true, true];
         _heli setSlingLoad objNull;
 
     }, [_heli, _boat], 3] call CBA_fnc_waitAndExecute;
@@ -35,3 +35,18 @@ params ["_heli", "_boat"];
     deleteVehicle _heli;
 
 }, [_heli, _boat]] call CBA_fnc_waitUntilAndExecute;
+
+// safe check boat loss
+[{
+    params ["_args", "_handle"];
+    _args params ["_heli", "_boat"];
+
+    if (_heli getVariable ["boatDropped", false]) exitWith {
+        [_handle] call CBA_fnc_removePerFrameHandler;
+    };  
+
+    if (isNull (getSlingLoad _heli)) then {
+        _heli setSlingLoad _boat;
+    };     
+    
+}, 0, [_heli, _boat]] call CBA_fnc_addPerFrameHandler;

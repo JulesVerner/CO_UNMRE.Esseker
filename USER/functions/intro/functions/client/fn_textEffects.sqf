@@ -11,8 +11,25 @@ private _boatID = format ["introBoat_%1", _number];
     private _boat = missionNamespace getVariable [_boatID, objNull];
 
     0 fadeSound 0;
-    player moveInAny _boat;
+    [player, _boat] remoteExecCall ["moveInAny", 2];
     player allowDamage false;
+    _boat allowDamage false;
+
+    // safe check to force stay in boat
+    [{
+        params ["_args", "_handle"];
+        _args params ["_boat"];
+
+        private _heli = _boat getVariable ["introHeli", objNull];
+        
+        if (_heli getVariable ["boatDropped", false]) exitWith {
+            [_handle] call CBA_fnc_removePerFrameHandler;
+        };
+
+        if (objectParent player != _boat) then {
+            [player, _boat] remoteExecCall ["moveInAny", 2];
+        };
+    }, 1, [_boat]] call CBA_fnc_addPerFrameHandler;
 
     [] spawn {
         sleep 3;

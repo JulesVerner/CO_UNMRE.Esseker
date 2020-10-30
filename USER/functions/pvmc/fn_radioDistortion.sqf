@@ -9,9 +9,9 @@
 
     if (_inArea) then {
         getPos player params ["", "", "_zPos"];
-        private _multiplicator = linearConversion [_minHeight, _maxHeight, _zPos, 0, 1, true];
-        private _multiplicatorSending = linearConversion [0, 1, _multiplicator, 1/90, 1, true];
-        private _multiplicatorReceiving = linearConversion [0, 1, _multiplicator, 90, 1, true];
+
+        private _multiplicatorSending = linearConversion [_maxHeight, _minHeight, _zPos, 1, 1/90, true];
+        private _multiplicatorReceiving = linearConversion [_maxHeight, _minHeight, _zPos, 1, 90, true];
 
         player setVariable ["tf_sendingDistanceMultiplicator", _multiplicatorSending];
         player setVariable ["tf_receivingDistanceMultiplicator", _multiplicatorReceiving];
