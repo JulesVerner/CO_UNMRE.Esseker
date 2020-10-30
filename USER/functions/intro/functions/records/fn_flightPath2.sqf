@@ -47,6 +47,7 @@ params ["_heli", "_boat"];
 
     if (isNull (getSlingLoad _heli)) then {
         _heli setSlingLoad _boat;
+        _boat setVectorUp [0,0,1];
     };     
     
 }, 0, [_heli, _boat]] call CBA_fnc_addPerFrameHandler;

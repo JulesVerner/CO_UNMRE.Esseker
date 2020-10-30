@@ -47,7 +47,7 @@ class GRAD_introFX {
         
         class waterFX {};
         class textEffects;
-        class muteAndDark { postInit = 1;};
+        class muteAndDark { preInit = 1;};
     };
 };
 

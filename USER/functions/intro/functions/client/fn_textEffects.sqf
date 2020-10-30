@@ -20,7 +20,7 @@ private _boatID = format ["introBoat_%1", _number];
         params ["_args", "_handle"];
         _args params ["_boat"];
 
-        private _heli = _boat getVariable ["introHeli", objNull];
+        private _heli = _boat getVariable ["introCamHeli", objNull];
         
         if (_heli getVariable ["boatDropped", false]) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
@@ -34,9 +34,9 @@ private _boatID = format ["introBoat_%1", _number];
     [] spawn {
         sleep 3;
         cutText ["", "BLACK IN", 20];
-        sleep 5;
-        3 fadeSound 1;
-        sleep 3;
+        sleep 7;
+        1 fadeSound 1;
+        sleep 1;
         playSound "intro_song";
         sleep 2;
         [ "Somewhere in Esseker", "26.07.2025" ] spawn BIS_fnc_infoText;

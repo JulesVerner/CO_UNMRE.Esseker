@@ -29,10 +29,10 @@ GRAD_introCam_shotDefinitions = [
     ["MOVE", 8, intro_camPos_1, intro_camTarget_1, .6],
     ["MOVE", 20, intro_camPos_2, intro_camTarget_2, .4],
     ["MOVE", 15, intro_camPos_2, intro_camTarget_3, .4],
-    ["MOVE", 5, intro_camPos_3, ace_player, .1],
+    ["MOVE", 5, intro_camPos_3, {objectParent player}, .1],
     ["BLEND", 5, ["DYNAMIC", "<t color='#ffffff' size = '1'>UN-Friedenstruppen auf dem Weg ins Einsatzgebiet</t>",-1,safeZoneY-safeZoneY/2,6,1,0], -1, -1],
-    ["ROTATE", 15, vehicle player, 0, 10, 90, 270, 0.6, true],
-    ["CAMERA", 15, intro_camPos_5, ace_player, .6, true, true, 1]
+    ["ROTATE", 15, {objectParent player}, 0, 10, 90, 270, 0.6, true],
+    ["CAMERA", 15, intro_camPos_5, {objectParent player}, .6, true, true, 1]
 ];
 
 
@@ -75,25 +75,18 @@ if (!isServer) exitWith {};
             _heli animateSource ["warn_hook_1_1_source",1,true];
 
             private _boat = createVehicle ["rhsgref_hidf_rhib", [0,0,0], [], 0, "NONE"];
+            /*
             _position set [2,20];
             _boat setPos _position;
+            */
             _heli setSlingLoad _boat;
+            _boat setVectorUp [0,0,1];
             _heli setVariable ["introCamBoat", _boat, true];
             _boat setVariable ["introCamHeli", _heli, true];
             _boat allowDamage false;
 
             private _boatID = format ["introBoat_%1", _i];
             missionNamespace setVariable [_boatID, _boat, true];
-
-            [{
-                params ["_heli"];
-                (isNull (getSlingLoad _heli))
-            },{
-                params ["_heli", "_boat"];
-                if (!(_heli getVariable ["boatDropped", false])) then {
-                    _heli setSlingLoad _boat;
-                };
-            }, [_heli, _boat]] call CBA_fnc_waitUntilAndExecute;
 
             {
                 private _groupUnits = units _x;
