@@ -65,9 +65,13 @@ setAperture 3; // fix darkness
                 sleep 3;
 
                 playSound "rhsusf_dws_warning_sinkrate";
+
+                sleep 3;
+
+                ["END1", true, 2, false, false] call BIS_fnc_endMission;
             };
 
-        }, [], 50] call CBA_fnc_waitAndExecute;
+        }, [], 40] call CBA_fnc_waitAndExecute;
 
     }, [], 15] call CBA_fnc_waitAndExecute;
 
