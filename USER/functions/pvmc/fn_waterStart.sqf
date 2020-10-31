@@ -31,7 +31,7 @@ if (!isServer) exitWith {};
         private _height = missionNamespace getVariable ["PVMC_waterLevel", 1.5];
 
         if (_height < _eyePosHeightMin) then {
-            _height = _height + missionNamespace getVariable ["PVMC_waterLevelDelta", 0.0005]; // 0.0005;
+            _height = (_height + (missionNamespace getVariable ["PVMC_waterLevelDelta", 0.0005])); // 0.0005;
         };
         missionNamespace setVariable ["PVMC_waterLevel", _height, true];
 
