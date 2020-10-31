@@ -210,7 +210,7 @@ if (!hasInterface) exitWith {};
 
     params ["_position", "_object"];
 
-        [position zombie_bloodpool] call HS_spawner_fnc_spawnLightHouseFeed;
+        [[6642.11,3974.18,37]] call HS_spawner_fnc_spawnLightHouseFeed;
 
         hintsilent "zombie joe spawned";
 

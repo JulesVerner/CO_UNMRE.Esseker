@@ -1,9 +1,5 @@
 params ["_pos"];
 
-_pos params ["", "", "_zPos"];
-
-_pos set [2, _zPos + 1];
-
 if (missionNamespace getVariable ["lightHouseFeed", false]) exitWith {};
 missionNamespace setVariable ["lightHouseFeed", true, true];
 
@@ -14,6 +10,7 @@ _unit setVariable ["suomen_overwriteRZ", true];
 _unit setVariable ["RZ_isDemon", false];
 _unit setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
 _unit setVariable ["RZ_aggressiveSoundCount",round (random 5),true]; 
+_unit allowDamage false;
 
 [_unit, selectRandom ["Zombi","Zomboy", "Infected1", "Infected2"]] remoteExec ["setFace", 0, _unit];
 
