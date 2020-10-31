@@ -21,6 +21,8 @@ private _waypoint = (group _VTOL) addWaypoint [[13272.9,3596.73,357.528], 0];
 _waypoint setWaypointSpeed "FULL";
 _VTOL action ["lightOn", _VTOL];
 
+_VTOL animateDoor ['Door_1_source', 0];
+
 // _VTOLhelper = createVehicle ["Land_VitaminBottle_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 // _VTOLhelper attachTo [_VTOL, [0,14.2,-2.8]];
 // _VTOLhelper hideObjectGlobal false;

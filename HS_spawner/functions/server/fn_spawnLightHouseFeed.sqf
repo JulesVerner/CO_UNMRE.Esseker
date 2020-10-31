@@ -12,6 +12,8 @@ _unit setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
 _unit setVariable ["RZ_aggressiveSoundCount",round (random 5),true]; 
 _unit allowDamage false;
 
+_unit disableAI "PATH";
+
 [_unit, selectRandom ["Zombi","Zomboy", "Infected1", "Infected2"]] remoteExec ["setFace", 0, _unit];
 
 _grpTargetUnit = createGroup west;

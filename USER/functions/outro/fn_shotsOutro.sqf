@@ -1,8 +1,8 @@
 GRAD_introCam_shotDefinitions = [
     ["CAMERA", 10, outroCam_pos_1, missionNamespace getVariable ["outroGuy", objNull], .6, true, true, 5],
     ["CAMERA", 5, outroCam_pos_2, {missionNamespace getVariable ["outroVTOL", objNull]}, .6],
-    ["MOVE", 30, outroCam_pos_3, {missionNamespace getVariable ["outroVTOL", objNull]}, .6],
-    ["ATTACHPFH", 30, {missionNamespace getVariable ["outroVTOL", objNull]}, [0,10.5,-3.3], [0,12.2,-2.6], 1.1]
+    ["MOVE", 40, outroCam_pos_3, {missionNamespace getVariable ["outroVTOL", objNull]}, .8],
+    ["ATTACHPFH", 30, {missionNamespace getVariable ["outroVTOL", objNull]}, [-0.5,10.5,-2.6], [0,12.2,-2.6], 1.1]
 ];
 
 /*
@@ -16,10 +16,11 @@ setAperture 3; // fix darkness
 
 [{
     [trg_outro_fish_close, 3] execVM "USER\functions\outro\fn_fishRising.sqf";
-
+    diwako_dui_main_toggled_off = true;
     [{
 
         [trg_outro_fish_medium, 1] execVM "USER\functions\outro\fn_fishRising.sqf";
+        diwako_dui_main_toggled_off = true;
 
         [trg_outro_trees_1] execVM "USER\functions\outro\fn_treeRising.sqf";
 
@@ -27,6 +28,8 @@ setAperture 3; // fix darkness
             private _VTOL = missionNamespace getVariable ["outroVTOL", objNull];
             private _tree = "Tree_Oak" createVehicleLocal [0,0,0];
             private _velocity = velocity _VTOL;
+
+            diwako_dui_main_toggled_off = true;
 
             [_VTOL, _tree] spawn {
                 params ["_VTOL", "_tree"];
