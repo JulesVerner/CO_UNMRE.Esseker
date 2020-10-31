@@ -14,7 +14,14 @@ class CfgSFX
 {
     class waterSplash
     {
-        sound0[] = {"USER\sounds\falls.ogg", db+6, 1.0, 1000, 1, 0, 0, 0};  // path to addon sound
+        sound0[] = {"USER\sounds\falls.ogg", db+6, 1.0, 500, 1, 0, 0, 0};  // path to addon sound
+        sounds[] = {sound0};
+        empty[] = {};
+    };
+
+    class waterLeakBunker
+    {
+        sound0[] = {"USER\sounds\falls.ogg", db+6, 1.0, 20, 1, 0, 0, 0};  // path to addon sound
         sounds[] = {sound0};
         empty[] = {};
     };
@@ -25,5 +32,10 @@ class CfgVehicles
     class waterSplashSource // class name to be used with createSoundSource
     {
         sound = "waterSplash"; // reference to CfgSFX class
+    };
+
+    class waterLeakBunkerSource // class name to be used with createSoundSource
+    {
+        sound = "waterLeakBunker"; // reference to CfgSFX class
     };
 };

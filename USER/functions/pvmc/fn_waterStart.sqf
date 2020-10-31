@@ -8,11 +8,12 @@ if (!isServer) exitWith {};
 
     [] remoteExec ["grad_user_fnc_waterMgmt", 0];
 
-    private _soundSource = createSoundSource ["waterSplashSource", getPos water_01, [], 0];
+    private _soundSource = createSoundSource ["waterLeakBunkerSource", getPos water_19, [], 0];
+    private _soundSource2 = createSoundSource ["waterLeakBunkerSource", getPos water_01, [], 0];
 
     [{ 
         params ["_args", "_handle"];
-        _args params ["_soundSource"];
+        _args params ["_soundSource", "_soundSource2"];
 
         private _eyePosHeightMin = 9999;
         
@@ -27,10 +28,10 @@ if (!isServer) exitWith {};
             };
         }forEach allPlayers;
 
-        private _height = missionNamespace getVariable ["PVMC_waterLevel", -1.5];
+        private _height = missionNamespace getVariable ["PVMC_waterLevel", 1.5];
 
         if (_height < _eyePosHeightMin) then {
-            _height = _height + 0.00025;
+            _height = _height + missionNamespace getVariable ["PVMC_waterLevelDelta", 0.0005]; // 0.0005;
         };
         missionNamespace setVariable ["PVMC_waterLevel", _height, true];
 
@@ -38,8 +39,9 @@ if (!isServer) exitWith {};
             [_handle] call CBA_fnc_removePerFrameHandler;
             missionNamespace setVariable ["PVMC_waterRising", false, true];
             deleteVehicle _soundSource;
+            deleteVehicle _soundSource2;
         };
 
-    }, 0, [_soundSource]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_soundSource, _soundSource2]] call CBA_fnc_addPerFrameHandler;
 
 }, [], 5] call CBA_fnc_waitAndExecute;
