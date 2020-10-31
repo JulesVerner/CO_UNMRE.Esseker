@@ -8,7 +8,7 @@
     private _minHeight = 1.5;
 
     if (_inArea) then {
-        getPos player params ["", "", "_zPos"];
+        getPosATL player params ["", "", "_zPos"];
 
         private _multiplicatorSending = linearConversion [_maxHeight, _minHeight, _zPos, 1, 1/90, true];
         private _multiplicatorReceiving = linearConversion [_maxHeight, _minHeight, _zPos, 1, 90, true];
