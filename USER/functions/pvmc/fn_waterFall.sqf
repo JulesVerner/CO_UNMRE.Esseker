@@ -28,7 +28,7 @@ _stream setParticleParams [
  [[0.8,0.7,0.2,0]] 
 ]; 
  
-_stream setDropInterval 0.01; 
+_stream setDropInterval 0.02; 
 
 [{
     params ["_object"];
