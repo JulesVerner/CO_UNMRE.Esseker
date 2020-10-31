@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=992;
+		nextID=1014;
 	};
 	class Camera
 	{
-		pos[]={6641.6587,244.99901,3967.9063};
-		dir[]={0.064354993,-0.23635088,0.96964675};
-		up[]={0.015660092,0.97164077,0.23594624};
-		aside[]={0.99790686,-2.7213537e-007,-0.066230126};
+		pos[]={19.546314,135.90477,-0.7196672};
+		dir[]={0.19617741,-0.61940497,0.76017153};
+		up[]={0.15477934,0.78506851,0.59975761};
+		aside[]={0.96827948,2.5247573e-008,-0.24988398};
 	};
 };
 binarizationWanted=0;
@@ -10673,18 +10673,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20.397873,121.50745,10.668457};
-						angles[]={0,0.48844782,0};
+						position[]={20.398001,121.50745,10.668};
+						angles[]={0,0.48844784,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 4];}";
 						description="MG";
 						isPlayable=1;
 					};
 					id=1550;
 					type="B_soldier_AR_F";
+					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10733,13 +10735,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22.439865,121.50405,9.6523438};
-						angles[]={0,0.53703773,0};
+						position[]={22.440001,121.50405,9.6520004};
+						angles[]={0,0.53703779,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 4];}";
 						description="Assistant MG";
 						isPlayable=1;
 					};
@@ -10870,13 +10873,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={27.70256,121.50144,9.5375977};
-						angles[]={0,0.31982136,0};
+						position[]={27.702999,121.50144,9.5380001};
+						angles[]={0,0.31981412,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 4];}";
 						description="Team Leader @Bravo 2";
 						isPlayable=1;
 					};
@@ -10930,13 +10934,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={25.968185,121.50144,8.8520508};
-						angles[]={0,0.49321976,0};
+						position[]={25.968,121.50144,8.8520002};
+						angles[]={0,0.49321261,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 4];}";
 						description="Marksman";
 						isPlayable=1;
 					};
@@ -10990,13 +10995,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={28.197678,121.50144,7.8139648};
-						angles[]={0,0.43497813,0};
+						position[]={28.198,121.50144,7.8140001};
+						angles[]={0,0.43497097,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 1];}";
 						description="AT";
 						isPlayable=1;
 					};
@@ -11057,7 +11063,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="gm_face_whiteHead_02";
+									value="";
 								};
 							};
 						};
@@ -11069,13 +11075,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26.380295,121.50144,6.8969727};
-						angles[]={0,0.59844565,0};
+						position[]={26.379999,121.50144,6.8970003};
+						angles[]={0,0.59843844,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable [""introBoat"", 1];}";
 						description="Rifleman";
 						isPlayable=1;
 					};
