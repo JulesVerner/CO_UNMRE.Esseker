@@ -46,15 +46,12 @@ setAperture 3; // fix darkness
                 playSound "rhsusf_dws_critical_enginefailure";
 
                 sleep 3;
-
-                moveOut player;
+                
                 player allowDamage false;
 
                 playSound "rhsusf_dws_warning_damagecritical";
 
                 sleep 3;
-
-                player setPos [0,0,0];
                 
                 playSound "rhsusf_dws_critical_enginefailure";
 
