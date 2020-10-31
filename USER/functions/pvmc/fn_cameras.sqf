@@ -40,7 +40,7 @@ if !(_bool) then {
 		private _cam = "camera" camCreate (getPos _camPos); 
 		_cam camSetTarget _camTarget; 
 		_cam cameraEffect ["Internal", "Back", _renderTG];
-		_cam camSetFov 0.75;
+		_cam camSetFov 0.3;
 		_cam camCommit 0;
 
 		_cameras pushBack _cam;
