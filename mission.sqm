@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1036;
+		nextID=1058;
 	};
 	class Camera
 	{
 		pos[]={6783.5771,291.01111,3964.7363};
-		dir[]={-0.75005865,-0.51471567,0.41531906};
-		up[]={-0.45029685,0.85735953,0.24933663};
-		aside[]={0.48441622,-5.3551048e-009,0.87484455};
+		dir[]={-0.75450337,-0.57188857,0.32199228};
+		up[]={-0.52599567,0.82033032,0.22447453};
+		aside[]={0.39251548,9.5402356e-008,0.91975266};
 	};
 };
 binarizationWanted=0;
@@ -39145,7 +39145,7 @@ class Mission
 			};
 			id=2570;
 			type="Land_LampStreet_02_off_F";
-			atlOffset=-0.79081726;
+			atlOffset=-0.79083252;
 		};
 	};
 	class Connections
