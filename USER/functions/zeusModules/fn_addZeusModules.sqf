@@ -22,6 +22,36 @@
 	}
 ] call zen_custom_modules_fnc_register;
 
+["GRAD mission events", "Adjust Water Speed", {
+
+    params ["_position", "_object"];
+
+        ["Adjust Water Speed", [
+            [
+                "COMBO", 
+                ["Pick Speed", ""], [
+                [
+                    0.0001, 0.0005,0.001,0.002,0.005
+                ], [
+                    ["0.0001", "0.0001"],
+                    ["0.0005", "0.0005"],
+                    ["0.001", "0.001"],
+                    ["0.002", "0.002"],
+                    ["0.005", "0.005"]
+            ], 0], true]
+        ], {
+            params ["_dialogValues", "_args"];
+            _args params ["_position"];
+
+            _dialogValues params ["_speed"];
+
+            hintsilent ("new speed is : " + str _speed);
+
+            missionNamespace setVariable ["PVMC_waterLevelDelta", _speed, true];
+            
+        }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
+
+}] call zen_custom_modules_fnc_register;
 
 
 [
