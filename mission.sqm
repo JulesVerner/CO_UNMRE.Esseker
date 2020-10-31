@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2567;
+		nextID=2570;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=970;
+		nextID=992;
 	};
 	class Camera
 	{
-		pos[]={6641.8345,245.37979,3972.4446};
-		dir[]={0.18491884,-0.56115675,0.80689812};
-		up[]={0.12535879,0.82769299,0.54700196};
-		aside[]={0.97481602,-2.5238842e-007,-0.22339931};
+		pos[]={6641.6587,244.99901,3967.9063};
+		dir[]={0.064354993,-0.23635088,0.96964675};
+		up[]={0.015660092,0.97164077,0.23594624};
+		aside[]={0.99790686,-2.7213537e-007,-0.066230126};
 	};
 };
 binarizationWanted=0;
@@ -122,13 +122,14 @@ addons[]=
 	"A3_Modules_F_ObjectModifiers",
 	"A3_Structures_F_EPB_Civ_Camping",
 	"acex_intelitems",
-	"rds_A2_Civilians"
+	"rds_A2_Civilians",
+	"A3_Structures_F_Enoch_Military_Camps"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=62;
+		items=63;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -533,6 +534,13 @@ class AddonsMetaData
 			name="RDS Civilian Pack Cars";
 			author="reyhard";
 			url="https://forums.bistudio.com/topic/170165-rds-a2-civilian-pack/";
+		};
+		class Item62
+		{
+			className="A3_Structures_F_Enoch_Military";
+			name="Arma 3 Contact Platform - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -7054,7 +7062,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=647;
+		items=648;
 		class Item0
 		{
 			dataType="Layer";
@@ -36154,7 +36162,7 @@ class Mission
 					};
 					id=2448;
 					type="B_CTRG_Soldier_AR_tna_F";
-					atlOffset=38.706085;
+					atlOffset=14.357193;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36203,7 +36211,7 @@ class Mission
 			{
 			};
 			id=2447;
-			atlOffset=38.706085;
+			atlOffset=14.357193;
 		};
 		class Item603
 		{
@@ -38972,6 +38980,140 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item647
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6642.8208,240.18633,3973.0181};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=2569;
+			type="CargoPlaftorm_01_rusty_F";
+			atlOffset=2.9727173;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Panel_4_hide";
+					expression="_this animateSource ['Panel_4_hide_source',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Leg_2_move";
+					expression="_this animateSource ['Leg_2_move_source',_value*6.541,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="Panel_3_hide";
+					expression="_this animateSource ['Panel_3_hide_source',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Leg_1_move";
+					expression="_this animateSource ['Leg_1_move_source',_value*6.541,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Panel_2_hide";
+					expression="_this animateSource ['Panel_2_hide_source',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="Panel_1_hide";
+					expression="_this animateSource ['Panel_1_hide_source',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=6;
 			};
 		};
 	};
