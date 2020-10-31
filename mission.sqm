@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2570;
+		nextID=2571;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1014;
+		nextID=1036;
 	};
 	class Camera
 	{
-		pos[]={19.546314,135.90477,-0.7196672};
-		dir[]={0.19617741,-0.61940497,0.76017153};
-		up[]={0.15477934,0.78506851,0.59975761};
-		aside[]={0.96827948,2.5247573e-008,-0.24988398};
+		pos[]={6783.5771,291.01111,3964.7363};
+		dir[]={-0.75005865,-0.51471567,0.41531906};
+		up[]={-0.45029685,0.85735953,0.24933663};
+		aside[]={0.48441622,-5.3551048e-009,0.87484455};
 	};
 };
 binarizationWanted=0;
@@ -123,13 +123,14 @@ addons[]=
 	"A3_Structures_F_EPB_Civ_Camping",
 	"acex_intelitems",
 	"rds_A2_Civilians",
-	"A3_Structures_F_Enoch_Military_Camps"
+	"A3_Structures_F_Enoch_Military_Camps",
+	"A3_Structures_F_Enoch_Infrastructure_Lamps"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=63;
+		items=64;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -539,6 +540,13 @@ class AddonsMetaData
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item63
+		{
+			className="A3_Structures_F_Enoch_Infrastructure";
+			name="Arma 3 Contact Platform - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -7062,7 +7070,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=648;
+		items=649;
 		class Item0
 		{
 			dataType="Layer";
@@ -10686,7 +10694,6 @@ class Mission
 					};
 					id=1550;
 					type="B_soldier_AR_F";
-					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -39122,6 +39129,23 @@ class Mission
 				};
 				nAttributes=6;
 			};
+		};
+		class Item648
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6736.4409,257.94806,3962.3076};
+				angles[]={0,4.6735926,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2570;
+			type="Land_LampStreet_02_off_F";
+			atlOffset=-0.79081726;
 		};
 	};
 	class Connections
