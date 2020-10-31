@@ -6,7 +6,7 @@ if (!isServer) exitWith {};
 
     missionNamespace setVariable ["PVMC_waterRising", true, true];
 
-    [] remoteExec ["grad_user_fnc_waterMgmt", [0,-2] select isDedicated];
+    [] remoteExec ["grad_user_fnc_waterMgmt", 0];
 
     private _soundSource = createSoundSource ["waterSplashSource", getPos water_01, [], 0];
 
