@@ -41,12 +41,14 @@ if (!isServer) exitWith {};
 [{
         private _soundSource = createSoundSource ["waterSplashSource", position intro_camTarget_2, [], 0];
 
+        /*
         private _allGroupsWithPlayers = [];
         {
             if (side _x == west && !isMultiplayer) then {
                 _allGroupsWithPlayers pushBackUnique group _x
             };
         } forEach allPlayers;
+        */
 
         for "_i" from 1 to 4 do {
 
@@ -88,6 +90,7 @@ if (!isServer) exitWith {};
             private _boatID = format ["introBoat_%1", _i];
             missionNamespace setVariable [_boatID, _boat, true];
 
+            /*
             {
                 private _groupUnits = units _x;
                 {
@@ -100,6 +103,7 @@ if (!isServer) exitWith {};
                     };
                 } forEach _groupUnits;
             } forEach _allGroupsWithPlayers;
+            */
 
             private _flightPath = format ["fn_flightPath%1.sqf", _i];
 
@@ -117,4 +121,4 @@ if (!isServer) exitWith {};
 
         }, [_soundSource], 180] call CBA_fnc_waitAndExecute;
 
-}, [], 25] call CBA_fnc_waitAndExecute;
+}, [], 20] call CBA_fnc_waitAndExecute;
