@@ -79,7 +79,7 @@ class longrange {
 
     class net5 {
         freq = 58;
-        name = "Juliett"
+        name = "Juliett";
     };
 
     class net6 {

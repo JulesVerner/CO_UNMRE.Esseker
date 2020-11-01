@@ -70,7 +70,7 @@ class GRAD_zeusModules {
 
 	class zeusModules {
 		file = "USER\functions\zeusModules";
-		class addZeusModules { postinit = 1 };
+		class addZeusModules { postinit = 1; };
 		class monitorEffects {};
 	};
 }
