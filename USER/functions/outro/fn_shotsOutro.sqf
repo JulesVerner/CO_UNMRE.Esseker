@@ -106,7 +106,7 @@ setAperture 3; // fix darkness
                 [_VTOL, _tree] spawn {
                     params ["_VTOL", "_tree"];
                     for "_i" from -30 to 0 do {
-                        private _position = _VTOL modelToWorld [0, 12 + -_i, _i-2];
+                        private _position = _VTOL modelToWorld [0, 12 + -_i, _i-10];
                         _tree setPos _position;
                         sleep 0.01;
                     };
