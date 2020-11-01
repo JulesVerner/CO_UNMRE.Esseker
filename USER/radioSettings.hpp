@@ -58,23 +58,28 @@ class shortrange {
 //LONGRANGE KANÄLE =============================================================
 class longrange {
     class net1 {
-        freq = 32;
+        freq = 50;
+        name = "Command Channel";
     };
 
     class net2 {
-        freq = 33;
+        freq = 55;
+        name = "Alpha 1";
     };
 
     class net3 {
-        freq = 34;
+        freq = 56;
+        name = "Alpha 2";
     };
 
     class net4 {
-        freq = 35;
+        freq = 57;
+        name = "Bravo";
     };
 
     class net5 {
-        freq = 36;
+        freq = 58;
+        name = "Juliett"
     };
 
     class net6 {

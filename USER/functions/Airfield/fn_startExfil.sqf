@@ -8,6 +8,8 @@ private _waypointPos = [8519.29,5803.34,0];
 private _vehicle = createVehicle [_vehicleClass, _spawnPos, [], 0, "FLY"];
 _vehicle setDir ((getPos _vehicle) getDir _waypointPos);
 _vehicle action ["lightOn", _vehicle];
+_vehicle setPilotLight true;
+_vehicle setCollisionLight true;
 
 missionNamespace setVariable ["outroVTOL", _vehicle, true];
 
