@@ -141,7 +141,7 @@ setAperture 3; // fix darkness
                     sleep 3;
                     setAperture -1;
 
-                    ["END1", true, 2, false, false] call BIS_fnc_endMission;
+                    ["END1", true, 0, false, false] call BIS_fnc_endMission;
                 };
 
             }, [], 40] call CBA_fnc_waitAndExecute;
