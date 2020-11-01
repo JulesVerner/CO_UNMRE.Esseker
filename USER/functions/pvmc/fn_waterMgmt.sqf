@@ -22,8 +22,7 @@
 
 
 [{
-    getPos water_01 params ["", "", "_posZ"];
-    missionNamespace getVariable ["PVMC_waterLevel", 0] > _posZ
+    !(missionNamespace getVariable ["PVMC_waterRising", false])
 },{
     deleteVehicle water_01;
     deleteVehicle water_07;
@@ -33,8 +32,7 @@
 
 
 [{
-    getPos water_03 params ["", "", "_posZ"];
-    missionNamespace getVariable ["PVMC_waterLevel", 0] > _posZ
+    !(missionNamespace getVariable ["PVMC_waterRising", false])
 },{
     deleteVehicle water_03;
     deleteVehicle water_09;
@@ -44,8 +42,7 @@
 
 
 [{
-    getPos water_05 params ["", "", "_posZ"];
-    missionNamespace getVariable ["PVMC_waterLevel", 0] > _posZ
+    !(missionNamespace getVariable ["PVMC_waterRising", false])
 },{
     deleteVehicle water_05;
     deleteVehicle water_11;
