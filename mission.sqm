@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2631;
+		nextID=2634;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1080;
+		nextID=1102;
 	};
 	class Camera
 	{
@@ -7171,7 +7171,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=654;
+		items=657;
 		class Item0
 		{
 			dataType="Layer";
@@ -10466,6 +10466,7 @@ class Mission
 					};
 					id=1543;
 					type="B_soldier_LAT_F";
+					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10798,7 +10799,6 @@ class Mission
 					};
 					id=1550;
 					type="B_soldier_AR_F";
-					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -40485,6 +40485,33 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item654
+		{
+			dataType="Marker";
+			position[]={9537.4248,110.392,4518.0366};
+			name="mrk_outro_wp_1";
+			type="Empty";
+			id=2631;
+			atlOffset=104.93693;
+		};
+		class Item655
+		{
+			dataType="Marker";
+			position[]={11081.212,103.12695,3987.6797};
+			name="mrk_outro_wp_2";
+			type="Empty";
+			id=2632;
+			atlOffset=-38.116531;
+		};
+		class Item656
+		{
+			dataType="Marker";
+			position[]={10887.791,134.0174,2366.4675};
+			name="mrk_outro_wp_3";
+			type="Empty";
+			id=2633;
+			atlOffset=-4.0590515;
 		};
 	};
 	class Connections
