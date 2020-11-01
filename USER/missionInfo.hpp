@@ -21,7 +21,7 @@ class CfgSFX
 
     class waterLeakBunker
     {
-        sound0[] = {"USER\sounds\falls.ogg", db+16, 1.0, 30, 1, 0, 0, 0};  // path to addon sound
+        sound0[] = {"USER\sounds\falls.ogg", db+16, 1.0, 60, 1, 0, 0, 0};  // path to addon sound
         sounds[] = {sound0};
         empty[] = {};
     };

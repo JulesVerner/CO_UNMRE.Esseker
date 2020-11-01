@@ -31,8 +31,8 @@ GRAD_introCam_shotDefinitions = [
     ["MOVE", 14, intro_camPos_2, intro_camTarget_3, .4],
     ["MOVE", 15, intro_camPos_3, {objectParent player}, .075],
     ["BLEND", 5, ["DYNAMIC", "<t color='#ffffff' size = '1'>UN-Friedenstruppen auf dem Weg ins Einsatzgebiet</t>",-1,safeZoneY-safeZoneY/2,6,1,0], -1, -1],
-    ["ROTATE", 15, {objectParent player}, 0, 10, 90, 270, 0.6, true],
-    ["CAMERA", 19, intro_camPos_5, {objectParent player}, .6, true, true, 1]
+    ["ROTATE", 12, {objectParent player}, 0, 10, 90, 270, 0.6, true],
+    ["CAMERA", 17, intro_camPos_5, {objectParent player}, .6, true, true, 1]
 ];
 
 
@@ -108,15 +108,6 @@ if (!isServer) exitWith {};
             private _flightPath = format ["fn_flightPath%1.sqf", _i];
 
             [_heli, _boat] execVM ("user\functions\intro\functions\records\" + _flightPath);
-
-            // try to fix completely bonkers boats
-            [{
-                params ["_heli", "_boat"];
-
-                _boat setVelocityModelSpace [0,((VelocityModelSpace _heli) select 1),0]; 
-                _boat setVectorDirAndUp [(vectorDir _heli), (vectorUp _heli)];
-
-            }, [_heli, _boat], 2] call CBA_fnc_waitAndExecute;
            
         };
 

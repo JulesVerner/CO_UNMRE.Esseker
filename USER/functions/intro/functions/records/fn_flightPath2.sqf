@@ -6,6 +6,13 @@ params ["_heli", "_boat"];
 ,[_heli,"unitPlayDone"]
 ] spawn BIS_fnc_UnitPlay;
 
+[{
+    params ["_heli", "_boat"];
+    _boat setVelocityModelSpace [0,((VelocityModelSpace _heli) select 1),0]; 
+    _boat setVectorDirAndUp [(vectorDir _heli), (vectorUp _heli)];
+    _heli setSlingLoad _boat;
+}, [_heli, _boat], 2] call CBA_fnc_waitAndExecute;
+
 
 [{
     params ["_heli", "_boat"];
@@ -46,8 +53,11 @@ params ["_heli", "_boat"];
     };  
 
     if (isNull (getSlingLoad _heli)) then {
+        
+        _boat setVelocityModelSpace [0,((VelocityModelSpace _heli) select 1),0]; 
+        _boat setVectorDirAndUp [(vectorDir _heli), (vectorUp _heli)];
+
         _heli setSlingLoad _boat;
-        _boat setVectorUp [0,0,1];
     };     
     
 }, 0, [_heli, _boat]] call CBA_fnc_addPerFrameHandler;
