@@ -109,6 +109,39 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+
+["HS_Spawner", "UN Z Group", {
+
+    params ["_position", "_object"];
+
+        ["HS Spawner UN", [
+            [
+                "COMBO", 
+                ["Pick Speed", ""], [
+                [
+                    "random", "slow","crawler","walker","fast"
+                ], [
+                    ["Random", "Random"],
+                    ["Slow", "Slow"],
+                    ["Crawler", "Crawler"],
+                    ["Walker", "Walker"],
+                    ["Fast", "Fast"],
+                    ["Spider", "Spider"]
+            ], 0], true]
+        ], {
+            params ["_dialogValues", "_args"];
+            _args params ["_position"];
+
+            _dialogValues params ["_speed"];
+
+            // hint str _position;
+
+            ["HS_SpawnerRandomUN", [_position, _speed]] call CBA_fnc_globalEvent;
+            
+        }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
+
+}] call zen_custom_modules_fnc_register;
+
 ["HS_Spawner", "LDF Z Group", {
 
     params ["_position", "_object"];

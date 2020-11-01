@@ -24,6 +24,7 @@ class HS_spawner {
         class loadoutCiv;
         class loadoutLDF;
         class loadoutRussian;
+        class loadoutUN;
 
         class playOrganMusic;
         class policeFeed;
@@ -33,6 +34,7 @@ class HS_spawner {
         class spawnClone;
         class spawnDemon;
         class spawnLDF;
+        class spawnUN;
 
         class spawnLightHouseFeed;
         class spawnListener {postInit = 1;};

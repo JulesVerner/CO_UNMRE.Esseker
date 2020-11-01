@@ -24,6 +24,13 @@ if (!isServer) exitWith {};
 }] call CBA_fnc_addEventhandler;
 
 
+["HS_SpawnerRandomUN", {
+    params ["_position", "_speed"];
+
+    [_position, _speed] call HS_spawner_fnc_spawnUN;
+
+}] call CBA_fnc_addEventhandler;
+
 
 ["HS_SpawnerRandomLDF", {
     params ["_position", "_speed"];
