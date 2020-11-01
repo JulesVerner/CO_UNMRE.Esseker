@@ -32,7 +32,8 @@ GRAD_introCam_shotDefinitions = [
     ["MOVE", 15, intro_camPos_3, {objectParent player}, .075],
     ["BLEND", 5, ["DYNAMIC", "<t color='#ffffff' size = '1'>UN-Friedenstruppen auf dem Weg ins Einsatzgebiet</t>",-1,safeZoneY-safeZoneY/2,6,1,0], -1, -1],
     ["ROTATE", 12, {objectParent player}, 0, 10, 90, 270, 0.6, true],
-    ["CAMERA", 17, intro_camPos_5, {objectParent player}, .6, true, true, 1]
+    ["CAMERA", 5, intro_camPos_5, {objectParent player}, .4, true, true, 1],
+    ["MOVE", 10, intro_camPos_5, {objectParent player}, .6]
 ];
 
 
