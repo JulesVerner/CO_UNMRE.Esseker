@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2571;
+		nextID=2574;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1058;
+		nextID=1080;
 	};
 	class Camera
 	{
 		pos[]={6783.5771,291.01111,3964.7363};
-		dir[]={-0.75450337,-0.57188857,0.32199228};
-		up[]={-0.52599567,0.82033032,0.22447453};
-		aside[]={0.39251548,9.5402356e-008,0.91975266};
+		dir[]={-0.70532942,-0.46774235,0.53267205};
+		up[]={-0.37326187,0.88386375,0.28189152};
+		aside[]={0.60266304,-1.2060627e-007,0.79800487};
 	};
 };
 binarizationWanted=0;
@@ -7070,7 +7070,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=649;
+		items=652;
 		class Item0
 		{
 			dataType="Layer";
@@ -39146,6 +39146,33 @@ class Mission
 			id=2570;
 			type="Land_LampStreet_02_off_F";
 			atlOffset=-0.79083252;
+		};
+		class Item649
+		{
+			dataType="Marker";
+			position[]={9537.4248,110.392,4518.0366};
+			name="mrk_outro_wp_1";
+			type="Empty";
+			id=2571;
+			atlOffset=104.93693;
+		};
+		class Item650
+		{
+			dataType="Marker";
+			position[]={11081.212,103.12695,3987.6797};
+			name="mrk_outro_wp_2";
+			type="Empty";
+			id=2572;
+			atlOffset=-38.116531;
+		};
+		class Item651
+		{
+			dataType="Marker";
+			position[]={10887.791,134.0174,2366.4675};
+			name="mrk_outro_wp_3";
+			type="Empty";
+			id=2573;
+			atlOffset=-4.0590515;
 		};
 	};
 	class Connections

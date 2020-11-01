@@ -13,11 +13,16 @@ _vehicleGroup setBehaviour "CARELESS";
     above only for debug!
 */
 
+if (missionNamespace getVariable ["outroStarted", false]) exitWith {};
+missionNamespace setVariable ["outroStarted", true, true];
+
 (selectRandom allPlayers) action ["fireInFlame", outro_campfire];
 
 private _VTOL = missionNamespace getVariable ["outroVTOL", objNull];
 
-private _waypoint = (group _VTOL) addWaypoint [[13272.9,3596.73,357.528], 0];
+private _waypoint = (group _VTOL) addWaypoint [getMarkerPos "mrk_outro_wp_1", 0];
+private _waypoint2 = (group _VTOL) addWaypoint [getMarkerPos "mrk_outro_wp_2", 1];
+private _waypoint3 = (group _VTOL) addWaypoint [getMarkerPos "mrk_outro_wp_3", 3];
 _waypoint setWaypointSpeed "FULL";
 _VTOL action ["lightOn", _VTOL];
 

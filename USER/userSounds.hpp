@@ -96,3 +96,18 @@ class crash
 	sound[] = { "USER\sounds\crash.ogg", 10, 1 };
 	titles[] = {};
 };
+
+
+class fish_1
+{
+	name = "fish_1";
+	sound[] = { "USER\sounds\fish_slap_1.ogg", 10, 1 };
+	titles[] = {};
+};
+
+class fish_2
+{
+	name = "fish_2";
+	sound[] = { "USER\sounds\fish_slap_2.ogg", 10, 1 };
+	titles[] = {};
+};

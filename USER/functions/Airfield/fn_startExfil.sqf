@@ -1,3 +1,6 @@
+if (missionNamespace getVariable ["exfilStarted", false]) exitWith {};
+missionNamespace setVariable ["exfilStarted", true, true];
+
 private _spawnPos = [1346.9,6991.08,400];
 private _vehicleClass = "B_T_VTOL_01_infantry_F";
 private _waypointPos = [8519.29,5803.34,0];
