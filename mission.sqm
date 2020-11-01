@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2657;
+		nextID=2667;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1168;
+		nextID=1190;
 	};
 	class Camera
 	{
-		pos[]={10821.631,76.817505,5024.1553};
-		dir[]={-0.63507134,-0.21884115,0.74097061};
-		up[]={-0.14245453,0.97569126,0.16621155};
-		aside[]={0.75936747,-8.8452362e-007,0.65083402};
+		pos[]={10727.091,37.996578,5384.9458};
+		dir[]={0.12460718,-0.45817101,0.8801204};
+		up[]={0.064230606,0.88884473,0.45366818};
+		aside[]={0.99015808,4.2724423e-008,-0.14018814};
 	};
 };
 binarizationWanted=0;
@@ -7157,7 +7157,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=658;
+		items=659;
 		class Item0
 		{
 			dataType="Layer";
@@ -26588,14 +26588,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10724.869,3.6027822,5484.9351};
-						angles[]={0,5.3001194,0};
+						position[]={10724.869,3.6027522,5484.9346};
+						angles[]={0,5.3001113,0};
 					};
 					side="Civilian";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
-						init="call{if (isServer) then {" \n "this disableAI ""MOVE"";" \n "this disableAI ""PATH"";" \n "[this, 3, ""rightleg"", ""bullet""] call ace_medical_fnc_addDamageToUnit;" \n "[this, true] call ace_medical_engine_fnc_setLimping;" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "   if ((_unit getVariable [""ace_medical_bloodVolume"", 6]) < 4.5) then { " \n "    _unit setVariable [""ace_medical_bloodVolume"", 4.5, true]; " \n "   }; " \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " " \n " }, 30, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "};}";
+						init="call{if (isServer) then {" \n "this disableAI ""MOVE"";" \n "this disableAI ""PATH"";" \n "[this, 3, ""rightleg"", ""bullet""] call ace_medical_fnc_addDamageToUnit;" \n "[this, true] call ace_medical_engine_fnc_setLimping;" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "   if ((_unit getVariable [""ace_medical_bloodVolume"", 6]) < 4.5) then { " \n "    _unit setVariable [""ace_medical_bloodVolume"", 4.5, true]; " \n "   }; " \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " " \n " }, 30, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "[{" \n "params [""_vip""];" \n "_owner = owner _vip;" \n "[_vip, false] remoteExec [""allowDamage"", _owner];" \n "}, [this], 10] call CBA_fnc_waitAndExecute;" \n "};}";
 						stance="Middle";
 						class Inventory
 						{
@@ -26630,6 +26630,7 @@ class Mission
 					};
 					id=1921;
 					type="C_Man_1_enoch_F";
+					atlOffset=2.6999998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -26647,7 +26648,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -26735,6 +26736,7 @@ class Mission
 			{
 			};
 			id=1920;
+			atlOffset=2.6999998;
 		};
 		class Item247
 		{
@@ -27579,7 +27581,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10724.8,3.6057875,5485.1499};
-				angles[]={-0,3.6123862,6.281425};
+				angles[]={0,3.6123862,6.281425};
 			};
 			side="Empty";
 			class Attributes
@@ -44162,7 +44164,326 @@ class Mission
 			};
 			id=2656;
 			type="Land_LampStreet_02_F";
-			atlOffset=-0.79100037;
+			atlOffset=-0.79101563;
+		};
+		class Item658
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6.9720001,122.11776,9.8640003};
+						angles[]={0,0.59843844,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="call{this setVariable [""introBoat"", 1];}";
+						description="Rifleman @Reserve";
+						isPlayable=1;
+					};
+					id=2666;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4.1502323,122.22144,9.139082};
+						angles[]={0,0.59843844,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{this setVariable [""introBoat"", 1];}";
+						description="Rifleman";
+						isPlayable=1;
+					};
+					id=2658;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5.1356587,122.22144,8.3006716};
+						angles[]={0,0.59843844,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{this setVariable [""introBoat"", 1];}";
+						description="Rifleman";
+						isPlayable=1;
+					};
+					id=2660;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6.1030436,122.21045,7.555861};
+						angles[]={0,0.59843844,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{this setVariable [""introBoat"", 1];}";
+						description="Rifleman";
+						isPlayable=1;
+					};
+					id=2662;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7.2973318,122.08306,6.8606653};
+						angles[]={0,0.59843844,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{this setVariable [""introBoat"", 1];}";
+						description="Rifleman";
+						isPlayable=1;
+					};
+					id=2664;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="Bravo2_5";
+			};
+			id=2665;
 		};
 	};
 	class Connections
