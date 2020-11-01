@@ -1,8 +1,9 @@
 GRAD_introCam_shotDefinitions = [
-    ["CAMERA", 10, outroCam_pos_1, missionNamespace getVariable ["outroGuy", objNull], .6, true, true, 5],
+    ["CAMERA", 5, outroCam_pos_1, missionNamespace getVariable ["outroGuy", objNull], .6, true, true, 5],
+    ["MOVE", 5, outroCam_pos_4, {missionNamespace getVariable ["outroGuy", objNull]}, .6],
     ["CAMERA", 5, outroCam_pos_2, {missionNamespace getVariable ["outroVTOL", objNull]}, .6],
     ["MOVE", 40, outroCam_pos_3, {missionNamespace getVariable ["outroVTOL", objNull]}, .8],
-    ["ATTACHPFH", 30, {missionNamespace getVariable ["outroVTOL", objNull]}, [-1,11.5,-2.6], [0,12.2,-2.6], 1.1]
+    ["ATTACHPFH", 30, {missionNamespace getVariable ["outroVTOL", objNull]}, [0,10.7,-2.5], [0,13.2,-2.6], 1.2]
 ];
 
 
@@ -70,7 +71,7 @@ setAperture 3; // fix darkness
             [_VTOL] spawn {
                 private _fish = createSimpleObject ["A3\animals_f\Fishes\Mullet_F.p3d", [0, 0, 0], true]; 
 
-                sleep 20;
+                sleep 24;
                 params ["_VTOL"];
                     for "_i" from -30 to 0 do {
                         private _position = _VTOL modelToWorld [-0.0688477,11.1743+_i,-2.63159 -_i];
@@ -83,7 +84,7 @@ setAperture 3; // fix darkness
             };
 
             [_VTOL] spawn {
-                sleep 25;
+                sleep 29;
                 private _fish = createSimpleObject ["A3\animals_f\Fishes\Mullet_F.p3d", [0, 0, 0], true]; 
                 params ["_VTOL"];
                     for "_i" from -30 to 0 do {
@@ -105,7 +106,7 @@ setAperture 3; // fix darkness
                 [_VTOL, _tree] spawn {
                     params ["_VTOL", "_tree"];
                     for "_i" from -30 to 0 do {
-                        private _position = _VTOL modelToWorld [0, 12 + -_i, _i+5];
+                        private _position = _VTOL modelToWorld [0, 12 + -_i, _i-2];
                         _tree setPos _position;
                         sleep 0.01;
                     };

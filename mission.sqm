@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2634;
+		nextID=2635;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6767.2749,296.69751,3880.7029};
-		dir[]={-0.70704859,-0.3565903,0.61072391};
-		up[]={-0.26998293,0.93419421,0.23319764};
-		aside[]={0.65369201,-3.1158561e-007,0.75679433};
+		pos[]={10623.419,9.3350134,5278.2959};
+		dir[]={-0.70905221,-0.20629524,-0.67432952};
+		up[]={-0.14949866,0.9784857,-0.14217715};
+		aside[]={-0.68915009,-6.9075031e-007,0.72463971};
 	};
 };
 binarizationWanted=0;
@@ -7171,7 +7171,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=657;
+		items=658;
 		class Item0
 		{
 			dataType="Layer";
@@ -34736,7 +34736,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10611.822,3.8544621,5277.4087};
+				position[]={10614.495,3.8544621,5277.4355};
 			};
 			side="Empty";
 			class Attributes
@@ -34745,7 +34745,7 @@ class Mission
 			};
 			id=2409;
 			type="HeliHEmpty";
-			atlOffset=1.3679447;
+			atlOffset=0.99135399;
 		};
 		class Item576
 		{
@@ -34768,7 +34768,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10609.604,3.8681047,5277.1753};
+				position[]={10611.983,3.8681049,5279.7158};
 			};
 			side="Empty";
 			class Attributes
@@ -34777,7 +34777,7 @@ class Mission
 			};
 			id=2411;
 			type="HeliHEmpty";
-			atlOffset=1.3678679;
+			atlOffset=0.87423801;
 		};
 		class Item578
 		{
@@ -40512,6 +40512,22 @@ class Mission
 			type="Empty";
 			id=2633;
 			atlOffset=-4.0590515;
+		};
+		class Item657
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10619.818,1.2471755,5265.9346};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="outroCam_pos_4";
+			};
+			id=2634;
+			type="HeliHEmpty";
+			atlOffset=2.5612669;
 		};
 	};
 	class Connections

@@ -14,6 +14,9 @@ _vehicleGroup setBehaviour "CARELESS";
 */
 
 if (missionNamespace getVariable ["outroStarted", false]) exitWith {};
+if (!(missionNamespace getVariable ["exfilStarted", false])) exitWith {
+    hint "exfil first stupid boi!";
+};
 missionNamespace setVariable ["outroStarted", true, true];
 
 (selectRandom allPlayers) action ["fireInFlame", outro_campfire];
