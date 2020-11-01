@@ -5,13 +5,13 @@ private _handle = [{
     params ["_args", "_handle"];
 
     private _inArea = player inArea trg_bunkerArea;
-    private _maxHeight = 50;
-    private _minHeight = 1.5;
+    private _maxHeight = 40;
+    private _minHeight = 10;
 
     if (_inArea) then {
         getPosATL player params ["", "", "_zPos"];
 
-        private _maxValue = missionNamespace getVariable ["distortionMax", 90];
+        private _maxValue = missionNamespace getVariable ["distortionMax", 80];
 
         private _multiplicatorSending = linearConversion [_maxHeight, _minHeight, _zPos, 1, 1/_maxValue, true];
         private _multiplicatorReceiving = linearConversion [_maxHeight, _minHeight, _zPos, 1, _maxValue, true];
