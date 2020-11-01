@@ -108,6 +108,15 @@ if (!isServer) exitWith {};
             private _flightPath = format ["fn_flightPath%1.sqf", _i];
 
             [_heli, _boat] execVM ("user\functions\intro\functions\records\" + _flightPath);
+
+            // try to fix completely bonkers boats
+            [{
+                params ["_heli", "_boat"];
+
+                _boat setVelocityModelSpace [0,((VelocityModelSpace _heli) select 1),0]; 
+                _boat setVectorDirAndUp [(vectorDir _heli), (vectorUp _heli)];
+
+            }, [_heli, _boat], 2] call CBA_fnc_waitAndExecute;
            
         };
 
