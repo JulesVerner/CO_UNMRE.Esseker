@@ -64,6 +64,9 @@ if (!isServer) exitWith {};
 
             private _group = createVehicleCrew _heli;
 
+
+
+
             _heli setCombatMode "BLUE";
             _heli disableAI "Lights";
             _heli setPilotLight true;
@@ -90,6 +93,9 @@ if (!isServer) exitWith {};
 
             private _boatID = format ["introBoat_%1", _i];
             missionNamespace setVariable [_boatID, _boat, true];
+
+            private _heliID = format ["introHeli_%1", _i];
+            missionNamespace setVariable [_heliID, _heli, true];
 
             /*
             {

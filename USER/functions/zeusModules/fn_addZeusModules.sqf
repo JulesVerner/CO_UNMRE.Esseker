@@ -1,4 +1,64 @@
 [
+	"GRAD mission intro fixes",
+	"Fix Boat 1", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+
+	private _boat = missionNamespace getVariable ["introBoat_1", objNull];
+	private _heli = missionNamespace getVariable ["introHeli_1", objNull];
+	
+	[_heli, _boat] remoteExecCall ["setSlingLoad", 2];
+
+	hintSilent "intro boat 1 fixed";
+	}
+] call zen_custom_modules_fnc_register;
+
+[
+	"GRAD mission intro fixes",
+	"Fix Boat 2", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+
+	private _boat = missionNamespace getVariable ["introBoat_2", objNull];
+	private _heli = missionNamespace getVariable ["introHeli_2", objNull];
+	
+	[_heli, _boat] remoteExecCall ["setSlingLoad", 2];
+
+	hintSilent "intro boat 2 fixed";
+	}
+] call zen_custom_modules_fnc_register;
+
+[
+	"GRAD mission intro fixes",
+	"Fix Boat 3", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+
+	private _boat = missionNamespace getVariable ["introBoat_3", objNull];
+	private _heli = missionNamespace getVariable ["introHeli_3", objNull];
+
+    [_heli, _boat] remoteExecCall ["setSlingLoad", 2];
+
+	hintSilent "intro boat 3 fixed";
+	}
+] call zen_custom_modules_fnc_register;
+
+[
+	"GRAD mission intro fixes",
+	"Fix Boat 4", 
+	{ 
+	params ["_modulePosition", "_attachedObject"]; 
+
+	private _boat = missionNamespace getVariable ["introBoat_4", objNull];
+	private _heli = missionNamespace getVariable ["introHeli_4", objNull];
+	
+	[_heli, _boat] remoteExecCall ["setSlingLoad", 2];
+
+	hintSilent "intro boat 4 fixed";
+	}
+] call zen_custom_modules_fnc_register;
+
+[
 	"GRAD mission events",
 	"PVMC Ghost Hawk Crash", 
 	{ 
