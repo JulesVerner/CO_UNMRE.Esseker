@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2667;
+		nextID=2670;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1234;
+		nextID=1256;
 	};
 	class Camera
 	{
-		pos[]={10722.813,5.1940546,5485.2793};
-		dir[]={0.77456731,-0.62544227,-0.094528928};
-		up[]={0.62084782,0.78025311,-0.075769231};
-		aside[]={-0.12114788,3.0765659e-007,-0.99267334};
+		pos[]={10713.756,18.136616,5450.5737};
+		dir[]={0.47268754,-0.51283389,0.7167803};
+		up[]={0.28234729,0.85845,0.42814857};
+		aside[]={0.83490163,-1.0919321e-006,-0.55058521};
 	};
 };
 binarizationWanted=0;
@@ -13900,7 +13900,7 @@ class Mission
 			};
 			id=1602;
 			type="Land_Pliers_F";
-			atlOffset=1.1231146;
+			atlOffset=1.1231136;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26595,7 +26595,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
-						init="call{if (isServer) then {" \n "this disableAI ""MOVE"";" \n "this disableAI ""PATH"";" \n "[this, 3, ""rightleg"", ""bullet""] call ace_medical_fnc_addDamageToUnit;" \n "[this, true] call ace_medical_engine_fnc_setLimping;" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "   if ((_unit getVariable [""ace_medical_bloodVolume"", 6]) < 4.5) then { " \n "    _unit setVariable [""ace_medical_bloodVolume"", 4.5, true]; " \n "   }; " \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " " \n " }, 30, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "_owner = owner _unit;" \n "[_vip, false] remoteExec [""allowDamage"", _owner];" \n "[_vip, true] call ace_medical_engine_fnc_setLimping;" \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " }, 1, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "};}";
+						init="call{if (isServer) then {" \n "this disableAI ""MOVE"";" \n "this disableAI ""PATH"";" \n "[this, 3, ""rightleg"", ""bullet""] call ace_medical_fnc_addDamageToUnit;" \n "[this, true] call ace_medical_engine_fnc_setLimping;" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "   if ((_unit getVariable [""ace_medical_bloodVolume"", 6]) < 4.5) then { " \n "    _unit setVariable [""ace_medical_bloodVolume"", 4.5, true]; " \n "   }; " \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " " \n " }, 30, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "_owner = owner _unit;" \n "[_unit, false] remoteExec [""allowDamage"", _owner];" \n "[_unit, true] call ace_medical_engine_fnc_setLimping;" \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " }, 1, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "};}";
 						stance="Middle";
 						class Inventory
 						{
