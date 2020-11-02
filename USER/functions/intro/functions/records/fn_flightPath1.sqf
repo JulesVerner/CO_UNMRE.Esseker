@@ -28,7 +28,7 @@ params ["_heli", "_boat"];
         _heli setVariable ["boatDropped", true, true];
         _heli setSlingLoad objNull;
 
-    }, [_heli, _boat], 3] call CBA_fnc_waitAndExecute;
+    }, [_heli, _boat], 5] call CBA_fnc_waitAndExecute;
 
 }, [_heli, _boat]] call CBA_fnc_waitUntilAndExecute;
 

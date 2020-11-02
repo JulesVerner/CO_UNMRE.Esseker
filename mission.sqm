@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1300;
+		nextID=1322;
 	};
 	class Camera
 	{
-		pos[]={10719.744,14.765378,5448.5688};
-		dir[]={0.18617354,-0.25760788,0.94826263};
-		up[]={0.049645104,0.96620536,0.25286135};
-		aside[]={0.98137873,-1.3206736e-006,-0.19267499};
+		pos[]={7.8515682,128.90311,2.2612622};
+		dir[]={-0.099692166,-0.61374694,0.7831865};
+		up[]={-0.077499017,0.7895025,0.60883629};
+		aside[]={0.99199873,-4.4237822e-009,0.12627201};
 	};
 };
 binarizationWanted=0;
@@ -43279,6 +43279,7 @@ class Mission
 					};
 					id=2635;
 					type="B_T_Soldier_SL_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -44205,7 +44206,6 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="call{this setVariable [""introBoat"", 1];}";
 						description="Rifleman @Reserve";
 						isPlayable=1;
 					};
@@ -44259,14 +44259,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4.1502323,122.22144,9.139082};
+						position[]={4.1500001,122.22144,9.1389999};
 						angles[]={0,0.59843844,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable [""introBoat"", 1];}";
 						description="Rifleman";
 						isPlayable=1;
 					};
@@ -44320,14 +44319,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5.1356587,122.22144,8.3006716};
+						position[]={5.1360002,122.22144,8.3010006};
 						angles[]={0,0.59843844,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable [""introBoat"", 1];}";
 						description="Rifleman";
 						isPlayable=1;
 					};
@@ -44381,14 +44379,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6.1030436,122.21045,7.555861};
+						position[]={6.1030002,122.21046,7.5560002};
 						angles[]={0,0.59843844,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable [""introBoat"", 1];}";
 						description="Rifleman";
 						isPlayable=1;
 					};
@@ -44442,14 +44439,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7.2973318,122.08306,6.8606653};
+						position[]={7.2969999,122.0831,6.8610001};
 						angles[]={0,0.59843844,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable [""introBoat"", 1];}";
 						description="Rifleman";
 						isPlayable=1;
 					};
