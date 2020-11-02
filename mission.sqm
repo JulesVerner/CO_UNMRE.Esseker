@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1256;
+		nextID=1300;
 	};
 	class Camera
 	{
-		pos[]={10713.756,18.136616,5450.5737};
-		dir[]={0.47268754,-0.51283389,0.7167803};
-		up[]={0.28234729,0.85845,0.42814857};
-		aside[]={0.83490163,-1.0919321e-006,-0.55058521};
+		pos[]={10719.744,14.765378,5448.5688};
+		dir[]={0.18617354,-0.25760788,0.94826263};
+		up[]={0.049645104,0.96620536,0.25286135};
+		aside[]={0.98137873,-1.3206736e-006,-0.19267499};
 	};
 };
 binarizationWanted=0;
@@ -6299,7 +6299,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=0.497159;
+														value=0.45411545;
 													};
 												};
 												class Item1
@@ -13900,7 +13900,7 @@ class Mission
 			};
 			id=1602;
 			type="Land_Pliers_F";
-			atlOffset=1.1231136;
+			atlOffset=1.1231146;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26595,7 +26595,8 @@ class Mission
 					flags=3;
 					class Attributes
 					{
-						init="call{if (isServer) then {" \n "this disableAI ""MOVE"";" \n "this disableAI ""PATH"";" \n "[this, 3, ""rightleg"", ""bullet""] call ace_medical_fnc_addDamageToUnit;" \n "[this, true] call ace_medical_engine_fnc_setLimping;" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "   if ((_unit getVariable [""ace_medical_bloodVolume"", 6]) < 4.5) then { " \n "    _unit setVariable [""ace_medical_bloodVolume"", 4.5, true]; " \n "   }; " \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " " \n " }, 30, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "_owner = owner _unit;" \n "[_unit, false] remoteExec [""allowDamage"", _owner];" \n "[_unit, true] call ace_medical_engine_fnc_setLimping;" \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " }, 1, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "};}";
+						init="call{if (isServer) then {" \n "this disableAI ""MOVE"";" \n "this disableAI ""PATH"";" \n "[this, 5, ""rightleg"", ""bullet""] call ace_medical_fnc_addDamageToUnit;" \n "[this, true] call ace_medical_engine_fnc_setLimping;" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "   if ((_unit getVariable [""ace_medical_bloodVolume"", 6]) < 4.5) then { " \n "    _unit setVariable [""ace_medical_bloodVolume"", 4.5, true]; " \n "   }; " \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " " \n " }, 30, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "" \n "[ " \n " { " \n "   " \n "  params [""_args"", ""_handle""]; " \n "  _args params [""_unit""]; " \n " " \n "  if (alive _unit) then { " \n "_owner = owner _unit;" \n "[_unit, false] remoteExec [""allowDamage"", _owner];" \n "[_unit, true] remoteExec [""ace_medical_engine_fnc_setLimping"", _owner];" \n "[_unit, [""Luca Beganovic"", ""Luca"", ""Beganovic""]] remoteExec [""setName""];" \n "  } else { " \n "   [_handle] call cba_fnc_removeperframehandler; " \n "  }; " \n " }, 1, [this] " \n "] call CBA_fnc_addPerFrameHandler;" \n "};}";
+						description="Luca Beganovic";
 						stance="Middle";
 						class Inventory
 						{
@@ -43266,7 +43267,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8527.2188,15.711423,5618.834};
+						position[]={8527.2188,15.711473,5618.834};
 						angles[]={0,1.3320004,0};
 					};
 					side="West";
@@ -43274,10 +43275,10 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						description="Mark Davis";
 					};
 					id=2635;
 					type="B_T_Soldier_SL_F";
-					atlOffset=-4.9591064e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -43337,7 +43338,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
